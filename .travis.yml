@@ -2,3 +2,6 @@ language: objective-c
 osx_image: xcode8.2
 xcode_workspace: photowall.xcworkspace
 xcode_scheme: photowall
+
+script:
+    - xcodebuild clean build -sdk iphonesimulator -workspace photowall.xcworkspace -scheme photowall CODE_SIGNING_REQUIRED=NO
