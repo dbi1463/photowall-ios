@@ -58,7 +58,7 @@
 	stubRequest(@"GET", @"http://localhost/ws/profiles")
 		.withHeader(@"Auth-Token", @"aaa")
 		.andReturn(200)
-		.withBody(@"[{\"id\":\"2d2b1f79-940c-45c1-bdd8-1ed539aad2aa\",\"nickname\":\"Spirit Tu\"}]")
+		.withBody(@"{\"data\": [{\"id\":\"2d2b1f79-940c-45c1-bdd8-1ed539aad2aa\",\"nickname\":\"Spirit Tu\"}]}")
 		.withHeader(@"Content-Type", @"application/json");
 
 	XCTestExpectation* expectation = [self expectationWithDescription:@"wait for get result"];
