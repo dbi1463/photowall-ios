@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+#import "UserManager.h"
+#import "AccountManager.h"
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, AuthenticationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (readonly, strong) NSPersistentContainer *persistentContainer;
-
-- (void)saveContext;
-
+@property (strong, nonatomic) UserManager* userManager;
+@property (strong, nonatomic) AccountManager* accountManager;
 
 @end
 

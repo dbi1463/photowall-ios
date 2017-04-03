@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController">
+            <connections>
+                <outlet property="changePortraitButton" destination="tnJ-a2-2Hy" id="mGr-yU-lQr"/>
+                <outlet property="nicknameField" destination="QFd-4i-aqT" id="XzB-ZS-lU3"/>
+                <outlet property="portrait" destination="BTj-6e-5ib" id="kXo-Qh-neP"/>
+                <outlet property="updateButton" destination="2ek-lW-xSE" id="Gk7-Zz-5pN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BTj-6e-5ib">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="160" id="R9D-Mp-d8d"/>
+                        <constraint firstAttribute="width" constant="160" id="tC0-Wt-yqN"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QFd-4i-aqT">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="XuC-J3-q9n"/>
+                        <constraint firstAttribute="width" constant="200" id="bzH-cW-SHs"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldValueChanged:" destination="-1" eventType="editingChanged" id="Ykm-xn-sNg"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ek-lW-xSE">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="83t-h6-4CH"/>
+                        <constraint firstAttribute="width" constant="120" id="upI-Dp-Ufy"/>
+                    </constraints>
+                    <state key="normal" title="Update"/>
+                    <connections>
+                        <action selector="updateButtonPressed:" destination="-1" eventType="touchUpInside" id="oul-0T-XgC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnJ-a2-2Hy">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <action selector="changePortraitButtonPressed:" destination="-1" eventType="touchUpInside" id="h6o-IB-euv"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hOh-fF-kiZ">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="Tq9-Yt-mTe"/>
+                        <constraint firstAttribute="height" constant="30" id="ZTO-Fv-shX"/>
+                    </constraints>
+                    <state key="normal" title="Logout"/>
+                    <connections>
+                        <action selector="logoutButtonPressed:" destination="-1" eventType="touchUpInside" id="LSw-Co-qPk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="QFd-4i-aqT" firstAttribute="top" secondItem="BTj-6e-5ib" secondAttribute="bottom" constant="30" id="2sa-PL-xGL"/>
+                <constraint firstItem="hOh-fF-kiZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8Qv-kr-ZhJ"/>
+                <constraint firstItem="BTj-6e-5ib" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8u7-2e-grX"/>
+                <constraint firstItem="tnJ-a2-2Hy" firstAttribute="height" secondItem="BTj-6e-5ib" secondAttribute="height" id="9EI-l0-oTe"/>
+                <constraint firstItem="BTj-6e-5ib" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="Ady-jj-GHA"/>
+                <constraint firstItem="2ek-lW-xSE" firstAttribute="top" secondItem="QFd-4i-aqT" secondAttribute="bottom" constant="20" id="Nw7-Zk-UM3"/>
+                <constraint firstItem="tnJ-a2-2Hy" firstAttribute="centerY" secondItem="BTj-6e-5ib" secondAttribute="centerY" id="SDT-2z-ROu"/>
+                <constraint firstItem="QFd-4i-aqT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WDO-OX-UWB"/>
+                <constraint firstItem="tnJ-a2-2Hy" firstAttribute="centerX" secondItem="BTj-6e-5ib" secondAttribute="centerX" id="buk-aa-WL4"/>
+                <constraint firstItem="hOh-fF-kiZ" firstAttribute="top" secondItem="2ek-lW-xSE" secondAttribute="bottom" constant="10" id="thh-Fc-7lr"/>
+                <constraint firstItem="2ek-lW-xSE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="twp-6j-yeW"/>
+                <constraint firstItem="tnJ-a2-2Hy" firstAttribute="width" secondItem="BTj-6e-5ib" secondAttribute="width" id="ynD-OY-50J"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

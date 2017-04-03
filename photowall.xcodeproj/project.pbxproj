@@ -8,12 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		0901072C0D2144C2D01D103C /* Pods_photowall_photowallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D7C38FF52C51B46ED445C4 /* Pods_photowall_photowallTests.framework */; };
+		1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA761E90C164000DBF74 /* ProfileViewController.m */; };
+		1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA771E90C164000DBF74 /* ProfileView.xib */; };
+		1E13CA7D1E90C1A5000DBF74 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */; };
+		1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */; };
+		1E13CA821E90C1DD000DBF74 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */; };
+		1E13CA831E90C1DD000DBF74 /* PhotoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */; };
+		1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */; };
+		1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */; };
+		1E13CA901E90CC8B000DBF74 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA8F1E90CC8B000DBF74 /* UIView+Utils.m */; };
+		1E13CA921E90CFFF000DBF74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E13CA911E90CFFF000DBF74 /* MapKit.framework */; };
+		1E18E7A61E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7A51E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m */; };
+		1E18E7A81E88DE6600200DC0 /* RestClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7A71E88DE6600200DC0 /* RestClientTests.m */; };
+		1E18E7AB1E88E1B000200DC0 /* AccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7AA1E88E1B000200DC0 /* AccountManager.m */; };
+		1E18E7B01E88E4AB00200DC0 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7AF1E88E4AB00200DC0 /* NSString+Utils.m */; };
+		1E18E7B41E88E8B100200DC0 /* NSStringUtilsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7B31E88E8B100200DC0 /* NSStringUtilsTests.m */; };
+		1E18E7B71E88EF3400200DC0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7B61E88EF3400200DC0 /* User.m */; };
+		1E18E7BB1E88EF4600200DC0 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E18E7BA1E88EF4600200DC0 /* _User.m */; };
 		1E5B4EF81E8619DD003F1239 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4EF71E8619DD003F1239 /* main.m */; };
 		1E5B4EFB1E8619DD003F1239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4EFA1E8619DD003F1239 /* AppDelegate.m */; };
 		1E5B4F041E8619DD003F1239 /* photowall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4F021E8619DD003F1239 /* photowall.xcdatamodeld */; };
-		1E5B4F061E8619DD003F1239 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5B4F051E8619DD003F1239 /* Assets.xcassets */; };
-		1E5B4F091E8619DD003F1239 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5B4F071E8619DD003F1239 /* LaunchScreen.storyboard */; };
 		1E5B4F141E8619DD003F1239 /* photowallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4F131E8619DD003F1239 /* photowallTests.m */; };
+		1EA8159E1E89063F00AD4B0F /* AccountManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */; };
+		1EB67E7C1E88A07900BF4498 /* RestRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */; };
+		1EB8DF8F1E8F4B9300FB67B6 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */; };
+		1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8DF921E8F830C00FB67B6 /* LoginViewController.m */; };
+		1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB8DF931E8F830C00FB67B6 /* LoginView.xib */; };
+		1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB8DF961E8F988D00FB67B6 /* Images.xcassets */; };
+		1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8A1E86566100BA0D77 /* RestRequest.m */; };
+		1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8D1E86570600BA0D77 /* RestResponse.m */; };
+		1ECB6F911E86676200BA0D77 /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F901E86676200BA0D77 /* RestClient.m */; };
+		1ED6B94F1E8FE31700CF0D63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6B94D1E8FE31700CF0D63 /* RootViewController.m */; };
+		1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED6B94E1E8FE31700CF0D63 /* RootView.xib */; };
 		A42F12C6F93B51B41D5130A9 /* Pods_photowall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B074D81CFA303000C95BAFFD /* Pods_photowall.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,17 +56,60 @@
 /* Begin PBXFileReference section */
 		03D7C38FF52C51B46ED445C4 /* Pods_photowall_photowallTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_photowall_photowallTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE073FC1196A431F3A8B0B9 /* Pods-photowall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall.release.xcconfig"; path = "Pods/Target Support Files/Pods-photowall/Pods-photowall.release.xcconfig"; sourceTree = "<group>"; };
+		1E13CA751E90C164000DBF74 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = View/ProfileViewController.h; sourceTree = "<group>"; };
+		1E13CA761E90C164000DBF74 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = View/ProfileViewController.m; sourceTree = "<group>"; };
+		1E13CA771E90C164000DBF74 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileView.xib; path = View/ProfileView.xib; sourceTree = "<group>"; };
+		1E13CA7A1E90C1A5000DBF74 /* PhotoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoMapViewController.h; path = View/PhotoMapViewController.h; sourceTree = "<group>"; };
+		1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoMapViewController.m; path = View/PhotoMapViewController.m; sourceTree = "<group>"; };
+		1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoMapView.xib; path = View/PhotoMapView.xib; sourceTree = "<group>"; };
+		1E13CA7F1E90C1DD000DBF74 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoListViewController.h; path = View/PhotoListViewController.h; sourceTree = "<group>"; };
+		1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoListViewController.m; path = View/PhotoListViewController.m; sourceTree = "<group>"; };
+		1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoListView.xib; path = View/PhotoListView.xib; sourceTree = "<group>"; };
+		1E13CA891E90C297000DBF74 /* PhotoGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoGridViewController.h; path = View/PhotoGridViewController.h; sourceTree = "<group>"; };
+		1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoGridViewController.m; path = View/PhotoGridViewController.m; sourceTree = "<group>"; };
+		1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoGridView.xib; path = View/PhotoGridView.xib; sourceTree = "<group>"; };
+		1E13CA8E1E90CC8B000DBF74 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Utils.h"; path = "Utils/UIView+Utils.h"; sourceTree = "<group>"; };
+		1E13CA8F1E90CC8B000DBF74 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Utils.m"; path = "Utils/UIView+Utils.m"; sourceTree = "<group>"; };
+		1E13CA911E90CFFF000DBF74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1E18E7A41E88C1A500200DC0 /* KeyChainSecuredAuthenticator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyChainSecuredAuthenticator.h; path = RestClient/KeyChainSecuredAuthenticator.h; sourceTree = "<group>"; };
+		1E18E7A51E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeyChainSecuredAuthenticator.m; path = RestClient/KeyChainSecuredAuthenticator.m; sourceTree = "<group>"; };
+		1E18E7A71E88DE6600200DC0 /* RestClientTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestClientTests.m; path = RestClient/RestClientTests.m; sourceTree = "<group>"; };
+		1E18E7A91E88E1B000200DC0 /* AccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AccountManager.h; path = Model/AccountManager.h; sourceTree = "<group>"; };
+		1E18E7AA1E88E1B000200DC0 /* AccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManager.m; path = Model/AccountManager.m; sourceTree = "<group>"; };
+		1E18E7AE1E88E4AB00200DC0 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Utils.h"; path = "Utils/NSString+Utils.h"; sourceTree = "<group>"; };
+		1E18E7AF1E88E4AB00200DC0 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Utils.m"; path = "Utils/NSString+Utils.m"; sourceTree = "<group>"; };
+		1E18E7B31E88E8B100200DC0 /* NSStringUtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringUtilsTests.m; path = Utils/NSStringUtilsTests.m; sourceTree = "<group>"; };
+		1E18E7B51E88EF3400200DC0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
+		1E18E7B61E88EF3400200DC0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		1E18E7B91E88EF4600200DC0 /* _User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = _User.h; path = CoreData/_User.h; sourceTree = "<group>"; };
+		1E18E7BA1E88EF4600200DC0 /* _User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = _User.m; path = CoreData/_User.m; sourceTree = "<group>"; };
 		1E5B4EF31E8619DD003F1239 /* photowall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = photowall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5B4EF71E8619DD003F1239 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1E5B4EF91E8619DD003F1239 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E5B4EFA1E8619DD003F1239 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1E5B4F031E8619DD003F1239 /* photowall.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = photowall.xcdatamodel; sourceTree = "<group>"; };
-		1E5B4F051E8619DD003F1239 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1E5B4F081E8619DD003F1239 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E5B4F0A1E8619DD003F1239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5B4F0F1E8619DD003F1239 /* photowallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photowallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5B4F131E8619DD003F1239 /* photowallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photowallTests.m; sourceTree = "<group>"; };
 		1E5B4F151E8619DD003F1239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E60634E1E90959E00C9501B /* photowall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = photowall.entitlements; sourceTree = "<group>"; };
+		1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManagerTests.m; path = Model/AccountManagerTests.m; sourceTree = "<group>"; };
+		1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequestTests.m; path = RestClient/RestRequestTests.m; sourceTree = "<group>"; };
+		1EB8DF8D1E8F4B9300FB67B6 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/UserManager.h; sourceTree = "<group>"; };
+		1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UserManager.m; path = Model/UserManager.m; sourceTree = "<group>"; };
+		1EB8DF911E8F830C00FB67B6 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoginViewController.h; path = View/LoginViewController.h; sourceTree = "<group>"; };
+		1EB8DF921E8F830C00FB67B6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = View/LoginViewController.m; sourceTree = "<group>"; };
+		1EB8DF931E8F830C00FB67B6 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = View/LoginView.xib; sourceTree = "<group>"; };
+		1EB8DF961E8F988D00FB67B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ECB6F891E86566100BA0D77 /* RestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestRequest.h; path = RestClient/RestRequest.h; sourceTree = "<group>"; };
+		1ECB6F8A1E86566100BA0D77 /* RestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequest.m; path = RestClient/RestRequest.m; sourceTree = "<group>"; };
+		1ECB6F8C1E86570600BA0D77 /* RestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestResponse.h; path = RestClient/RestResponse.h; sourceTree = "<group>"; };
+		1ECB6F8D1E86570600BA0D77 /* RestResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestResponse.m; path = RestClient/RestResponse.m; sourceTree = "<group>"; };
+		1ECB6F8F1E86676200BA0D77 /* RestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestClient.h; path = RestClient/RestClient.h; sourceTree = "<group>"; };
+		1ECB6F901E86676200BA0D77 /* RestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestClient.m; path = RestClient/RestClient.m; sourceTree = "<group>"; };
+		1ED6B94C1E8FE31700CF0D63 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = View/RootViewController.h; sourceTree = "<group>"; };
+		1ED6B94D1E8FE31700CF0D63 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = View/RootViewController.m; sourceTree = "<group>"; };
+		1ED6B94E1E8FE31700CF0D63 /* RootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootView.xib; path = View/RootView.xib; sourceTree = "<group>"; };
 		1F738D6CE5D212EC55F2FBF6 /* Pods-photowall-photowallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall-photowallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photowall-photowallTests/Pods-photowall-photowallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		432CC38A78A17AE6E9B86F05 /* Pods-photowall-photowallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall-photowallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-photowall-photowallTests/Pods-photowall-photowallTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7409AB7651B0C1BE9424086 /* Pods-photowall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photowall/Pods-photowall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E13CA921E90CFFF000DBF74 /* MapKit.framework in Frameworks */,
 				A42F12C6F93B51B41D5130A9 /* Pods_photowall.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +137,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E18E7AC1E88E1B600200DC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8DF8D1E8F4B9300FB67B6 /* UserManager.h */,
+				1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */,
+				1E18E7B51E88EF3400200DC0 /* User.h */,
+				1E18E7B61E88EF3400200DC0 /* User.m */,
+				1E18E7A91E88E1B000200DC0 /* AccountManager.h */,
+				1E18E7AA1E88E1B000200DC0 /* AccountManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1E18E7AD1E88E45100200DC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1E18E7AE1E88E4AB00200DC0 /* NSString+Utils.h */,
+				1E18E7AF1E88E4AB00200DC0 /* NSString+Utils.m */,
+				1E13CA8E1E90CC8B000DBF74 /* UIView+Utils.h */,
+				1E13CA8F1E90CC8B000DBF74 /* UIView+Utils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		1E18E7B11E88E86E00200DC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1E18E7B21E88E87600200DC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1E18E7B31E88E8B100200DC0 /* NSStringUtilsTests.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		1E18E7B81E88EF3A00200DC0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1E18E7B91E88EF4600200DC0 /* _User.h */,
+				1E18E7BA1E88EF4600200DC0 /* _User.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		1E5B4EEA1E8619DC003F1239 = {
 			isa = PBXGroup;
 			children = (
@@ -90,12 +209,17 @@
 		1E5B4EF51E8619DD003F1239 /* photowall */ = {
 			isa = PBXGroup;
 			children = (
+				1E60634E1E90959E00C9501B /* photowall.entitlements */,
+				1EB8DF901E8F82AE00FB67B6 /* View */,
+				1E18E7B81E88EF3A00200DC0 /* CoreData */,
+				1E18E7AD1E88E45100200DC0 /* Utils */,
+				1E18E7AC1E88E1B600200DC0 /* Model */,
+				1ECB6F881E86560100BA0D77 /* RestClient */,
 				1E5B4EF91E8619DD003F1239 /* AppDelegate.h */,
 				1E5B4EFA1E8619DD003F1239 /* AppDelegate.m */,
-				1E5B4F051E8619DD003F1239 /* Assets.xcassets */,
-				1E5B4F071E8619DD003F1239 /* LaunchScreen.storyboard */,
 				1E5B4F0A1E8619DD003F1239 /* Info.plist */,
 				1E5B4F021E8619DD003F1239 /* photowall.xcdatamodeld */,
+				1EB8DF961E8F988D00FB67B6 /* Images.xcassets */,
 				1E5B4EF61E8619DD003F1239 /* Supporting Files */,
 			);
 			path = photowall;
@@ -112,15 +236,68 @@
 		1E5B4F121E8619DD003F1239 /* photowallTests */ = {
 			isa = PBXGroup;
 			children = (
+				1E18E7B21E88E87600200DC0 /* Utils */,
+				1E18E7B11E88E86E00200DC0 /* Model */,
+				1EB67E7A1E88A03E00BF4498 /* RestClient */,
 				1E5B4F131E8619DD003F1239 /* photowallTests.m */,
 				1E5B4F151E8619DD003F1239 /* Info.plist */,
 			);
 			path = photowallTests;
 			sourceTree = "<group>";
 		};
+		1EB67E7A1E88A03E00BF4498 /* RestClient */ = {
+			isa = PBXGroup;
+			children = (
+				1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */,
+				1E18E7A71E88DE6600200DC0 /* RestClientTests.m */,
+			);
+			name = RestClient;
+			sourceTree = "<group>";
+		};
+		1EB8DF901E8F82AE00FB67B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EB8DF911E8F830C00FB67B6 /* LoginViewController.h */,
+				1EB8DF921E8F830C00FB67B6 /* LoginViewController.m */,
+				1EB8DF931E8F830C00FB67B6 /* LoginView.xib */,
+				1ED6B94C1E8FE31700CF0D63 /* RootViewController.h */,
+				1ED6B94D1E8FE31700CF0D63 /* RootViewController.m */,
+				1ED6B94E1E8FE31700CF0D63 /* RootView.xib */,
+				1E13CA751E90C164000DBF74 /* ProfileViewController.h */,
+				1E13CA761E90C164000DBF74 /* ProfileViewController.m */,
+				1E13CA771E90C164000DBF74 /* ProfileView.xib */,
+				1E13CA7A1E90C1A5000DBF74 /* PhotoMapViewController.h */,
+				1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */,
+				1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */,
+				1E13CA7F1E90C1DD000DBF74 /* PhotoListViewController.h */,
+				1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */,
+				1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */,
+				1E13CA891E90C297000DBF74 /* PhotoGridViewController.h */,
+				1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */,
+				1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1ECB6F881E86560100BA0D77 /* RestClient */ = {
+			isa = PBXGroup;
+			children = (
+				1ECB6F891E86566100BA0D77 /* RestRequest.h */,
+				1ECB6F8A1E86566100BA0D77 /* RestRequest.m */,
+				1ECB6F8C1E86570600BA0D77 /* RestResponse.h */,
+				1ECB6F8D1E86570600BA0D77 /* RestResponse.m */,
+				1ECB6F8F1E86676200BA0D77 /* RestClient.h */,
+				1ECB6F901E86676200BA0D77 /* RestClient.m */,
+				1E18E7A41E88C1A500200DC0 /* KeyChainSecuredAuthenticator.h */,
+				1E18E7A51E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m */,
+			);
+			name = RestClient;
+			sourceTree = "<group>";
+		};
 		783F0DE595A08C7A8B236DD9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E13CA911E90CFFF000DBF74 /* MapKit.framework */,
 				B074D81CFA303000C95BAFFD /* Pods_photowall.framework */,
 				03D7C38FF52C51B46ED445C4 /* Pods_photowall_photowallTests.framework */,
 			);
@@ -193,7 +370,16 @@
 				TargetAttributes = {
 					1E5B4EF21E8619DC003F1239 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 479P3H2UN3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					1E5B4F0E1E8619DD003F1239 = {
 						CreatedOnToolsVersion = 8.0;
@@ -226,8 +412,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E5B4F091E8619DD003F1239 /* LaunchScreen.storyboard in Resources */,
-				1E5B4F061E8619DD003F1239 /* Assets.xcassets in Resources */,
+				1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */,
+				1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */,
+				1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */,
+				1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */,
+				1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */,
+				1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */,
+				1E13CA831E90C1DD000DBF74 /* PhotoListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +529,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB8DF8F1E8F4B9300FB67B6 /* UserManager.m in Sources */,
+				1E18E7BB1E88EF4600200DC0 /* _User.m in Sources */,
+				1E13CA821E90C1DD000DBF74 /* PhotoListViewController.m in Sources */,
+				1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */,
+				1E18E7B71E88EF3400200DC0 /* User.m in Sources */,
+				1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */,
+				1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */,
 				1E5B4F041E8619DD003F1239 /* photowall.xcdatamodeld in Sources */,
+				1ECB6F911E86676200BA0D77 /* RestClient.m in Sources */,
 				1E5B4EFB1E8619DD003F1239 /* AppDelegate.m in Sources */,
+				1ED6B94F1E8FE31700CF0D63 /* RootViewController.m in Sources */,
+				1E13CA7D1E90C1A5000DBF74 /* PhotoMapViewController.m in Sources */,
 				1E5B4EF81E8619DD003F1239 /* main.m in Sources */,
+				1E18E7B01E88E4AB00200DC0 /* NSString+Utils.m in Sources */,
+				1E18E7AB1E88E1B000200DC0 /* AccountManager.m in Sources */,
+				1E13CA901E90CC8B000DBF74 /* UIView+Utils.m in Sources */,
+				1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */,
+				1E18E7A61E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m in Sources */,
+				1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +556,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E5B4F141E8619DD003F1239 /* photowallTests.m in Sources */,
+				1EB67E7C1E88A07900BF4498 /* RestRequestTests.m in Sources */,
+				1E18E7A81E88DE6600200DC0 /* RestClientTests.m in Sources */,
+				1EA8159E1E89063F00AD4B0F /* AccountManagerTests.m in Sources */,
+				1E18E7B41E88E8B100200DC0 /* NSStringUtilsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,17 +572,6 @@
 			targetProxy = 1E5B4F101E8619DD003F1239 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		1E5B4F071E8619DD003F1239 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E5B4F081E8619DD003F1239 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1E5B4F161E8619DD003F1239 /* Debug */ = {
@@ -392,6 +592,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -440,6 +641,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -469,7 +671,11 @@
 			baseConfigurationReference = A7409AB7651B0C1BE9424086 /* Pods-photowall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = photowall/photowall.entitlements;
+				DEVELOPMENT_TEAM = 479P3H2UN3;
 				INFOPLIST_FILE = photowall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picowork.photowall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,7 +688,11 @@
 			baseConfigurationReference = 1AE073FC1196A431F3A8B0B9 /* Pods-photowall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = photowall/photowall.entitlements;
+				DEVELOPMENT_TEAM = 479P3H2UN3;
 				INFOPLIST_FILE = photowall/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = picowork.photowall;
 				PRODUCT_NAME = "$(TARGET_NAME)";

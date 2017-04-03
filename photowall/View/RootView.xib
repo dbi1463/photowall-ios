@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
+            <connections>
+                <outlet property="allPhotoTabButton" destination="15l-jl-87d" id="5Lv-5e-k8j"/>
+                <outlet property="gridTabButton" destination="chj-TL-zYX" id="fGj-M0-u3p"/>
+                <outlet property="photoMapTabButton" destination="mdH-se-bap" id="jgb-TF-pOP"/>
+                <outlet property="profileTabButton" destination="2Pw-kg-8KZ" id="FvK-Ck-Eqa"/>
+                <outlet property="takePictureTabButton" destination="fjj-QX-rUh" id="gy3-ER-90o"/>
+                <outlet property="view" destination="Oso-Ge-tBu" id="b4j-8X-zbI"/>
+                <outlet property="viewContainer" destination="k8s-6U-GZA" id="n2E-ff-5Xj"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Oso-Ge-tBu">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8s-6U-GZA" userLabel="Container">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xW4-pk-pYO" userLabel="Tab Bars">
+                    <subviews>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15l-jl-87d">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="k6t-85-KAr"/>
+                            </constraints>
+                            <state key="normal" title="All"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="SVf-dF-d8C"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chj-TL-zYX">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="DQB-8C-wEu"/>
+                            </constraints>
+                            <state key="normal" title="Grid"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="b27-7T-F5b"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjj-QX-rUh" userLabel="Take Picture">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="fjj-QX-rUh" secondAttribute="height" id="ZgZ-Qs-isf"/>
+                            </constraints>
+                            <state key="normal" title="Picture"/>
+                        </button>
+                        <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdH-se-bap" userLabel="Map">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="aqz-Gv-RlH"/>
+                            </constraints>
+                            <state key="normal" title="Map"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="oXp-o8-DQq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Pw-kg-8KZ" userLabel="Profile">
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="n1k-ls-b9V"/>
+                            </constraints>
+                            <state key="normal" title="Me"/>
+                            <connections>
+                                <action selector="tabButtonPressed:" destination="-1" eventType="touchUpInside" id="rdF-fq-aAu"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="chj-TL-zYX" secondAttribute="bottom" id="2Hm-7T-z6V"/>
+                        <constraint firstItem="chj-TL-zYX" firstAttribute="leading" secondItem="15l-jl-87d" secondAttribute="trailing" id="4UT-Q2-RqC"/>
+                        <constraint firstAttribute="trailing" secondItem="2Pw-kg-8KZ" secondAttribute="trailing" id="B1A-tp-AdD"/>
+                        <constraint firstItem="2Pw-kg-8KZ" firstAttribute="width" secondItem="15l-jl-87d" secondAttribute="width" id="B2H-V4-YIU"/>
+                        <constraint firstAttribute="bottom" secondItem="2Pw-kg-8KZ" secondAttribute="bottom" id="Bg6-St-3uK"/>
+                        <constraint firstAttribute="bottom" secondItem="mdH-se-bap" secondAttribute="bottom" id="CQr-Es-HHB"/>
+                        <constraint firstAttribute="bottom" secondItem="fjj-QX-rUh" secondAttribute="bottom" id="KVX-E3-kZy"/>
+                        <constraint firstItem="2Pw-kg-8KZ" firstAttribute="leading" secondItem="mdH-se-bap" secondAttribute="trailing" id="SJX-j0-nlt"/>
+                        <constraint firstAttribute="bottom" secondItem="15l-jl-87d" secondAttribute="bottom" id="Wgs-Mk-ImV"/>
+                        <constraint firstItem="fjj-QX-rUh" firstAttribute="leading" secondItem="chj-TL-zYX" secondAttribute="trailing" id="daf-Hq-IOQ"/>
+                        <constraint firstItem="fjj-QX-rUh" firstAttribute="width" secondItem="15l-jl-87d" secondAttribute="width" id="ekF-YG-Tm8"/>
+                        <constraint firstItem="mdH-se-bap" firstAttribute="width" secondItem="15l-jl-87d" secondAttribute="width" id="fLh-oj-67U"/>
+                        <constraint firstItem="chj-TL-zYX" firstAttribute="width" secondItem="15l-jl-87d" secondAttribute="width" id="gMo-I1-eLO"/>
+                        <constraint firstItem="mdH-se-bap" firstAttribute="leading" secondItem="fjj-QX-rUh" secondAttribute="trailing" id="jyV-MO-vr0"/>
+                        <constraint firstItem="15l-jl-87d" firstAttribute="leading" secondItem="xW4-pk-pYO" secondAttribute="leading" id="mko-r2-CJr"/>
+                        <constraint firstAttribute="height" secondItem="fjj-QX-rUh" secondAttribute="height" id="qRt-zd-SJU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xW4-pk-pYO" secondAttribute="bottom" id="Bg4-7w-bY0"/>
+                <constraint firstItem="k8s-6U-GZA" firstAttribute="top" secondItem="Oso-Ge-tBu" secondAttribute="top" id="bzg-zC-KGR"/>
+                <constraint firstAttribute="trailing" secondItem="k8s-6U-GZA" secondAttribute="trailing" id="cNS-kW-ZwS"/>
+                <constraint firstItem="k8s-6U-GZA" firstAttribute="leading" secondItem="Oso-Ge-tBu" secondAttribute="leading" id="eBA-Ci-R01"/>
+                <constraint firstAttribute="bottom" secondItem="k8s-6U-GZA" secondAttribute="bottom" id="elJ-dA-P4u"/>
+                <constraint firstItem="xW4-pk-pYO" firstAttribute="leading" secondItem="Oso-Ge-tBu" secondAttribute="leading" id="mg7-cj-Yf4"/>
+                <constraint firstAttribute="trailing" secondItem="xW4-pk-pYO" secondAttribute="trailing" id="s9z-dH-P5c"/>
+            </constraints>
+            <point key="canvasLocation" x="-262" y="144"/>
+        </view>
+    </objects>
+</document>
