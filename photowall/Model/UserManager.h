@@ -18,6 +18,10 @@
 
 - (User*)getUser:(NSString*)userId;
 
+- (void)markAsFavorite:(User*)user;
+
+- (void)unmarkFavorite:(User*)user;
+
 - (void)synchronize;
 
 @property (readonly) NSArray* users;

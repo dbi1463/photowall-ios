@@ -10,4 +10,6 @@
 
 @interface PhotoGridViewController : UIViewController
 
+@property (weak) UIViewController* rootViewController;
+
 @end

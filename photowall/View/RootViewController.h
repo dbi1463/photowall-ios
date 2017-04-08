@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+@class UserManager;
 @class AccountManager;
 
 @interface RootViewController : UIViewController
@@ -20,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIButton* photoMapTabButton;
 @property (weak, nonatomic) IBOutlet UIButton* takePictureTabButton;
 
+@property UserManager* userManager;
 @property AccountManager* accountManager;
 
 @end

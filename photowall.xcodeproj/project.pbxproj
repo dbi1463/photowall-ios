@@ -12,8 +12,8 @@
 		1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA771E90C164000DBF74 /* ProfileView.xib */; };
 		1E13CA7D1E90C1A5000DBF74 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */; };
 		1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */; };
-		1E13CA821E90C1DD000DBF74 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */; };
-		1E13CA831E90C1DD000DBF74 /* PhotoListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */; };
+		1E13CA821E90C1DD000DBF74 /* PosterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA801E90C1DD000DBF74 /* PosterListViewController.m */; };
+		1E13CA831E90C1DD000DBF74 /* PosterListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA811E90C1DD000DBF74 /* PosterListView.xib */; };
 		1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */; };
 		1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */; };
 		1E13CA901E90CC8B000DBF74 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA8F1E90CC8B000DBF74 /* UIView+Utils.m */; };
@@ -29,6 +29,10 @@
 		1E5B4EFB1E8619DD003F1239 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4EFA1E8619DD003F1239 /* AppDelegate.m */; };
 		1E5B4F041E8619DD003F1239 /* photowall.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4F021E8619DD003F1239 /* photowall.xcdatamodeld */; };
 		1E5B4F141E8619DD003F1239 /* photowallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5B4F131E8619DD003F1239 /* photowallTests.m */; };
+		1E9B85101E9892430081B251 /* PosterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9B850E1E9892430081B251 /* PosterCell.m */; };
+		1E9B85111E9892430081B251 /* PosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B850F1E9892430081B251 /* PosterCell.xib */; };
+		1E9B85141E98B04F0081B251 /* Mapping2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E9B85131E98B04F0081B251 /* Mapping2.xcmappingmodel */; };
+		1E9B85171E98B7800081B251 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B85151E98B7800081B251 /* Strings.strings */; };
 		1EA8159E1E89063F00AD4B0F /* AccountManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */; };
 		1EB67E7C1E88A07900BF4498 /* RestRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */; };
 		1EB8DF8F1E8F4B9300FB67B6 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */; };
@@ -62,9 +66,9 @@
 		1E13CA7A1E90C1A5000DBF74 /* PhotoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoMapViewController.h; path = View/PhotoMapViewController.h; sourceTree = "<group>"; };
 		1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoMapViewController.m; path = View/PhotoMapViewController.m; sourceTree = "<group>"; };
 		1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoMapView.xib; path = View/PhotoMapView.xib; sourceTree = "<group>"; };
-		1E13CA7F1E90C1DD000DBF74 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoListViewController.h; path = View/PhotoListViewController.h; sourceTree = "<group>"; };
-		1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoListViewController.m; path = View/PhotoListViewController.m; sourceTree = "<group>"; };
-		1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoListView.xib; path = View/PhotoListView.xib; sourceTree = "<group>"; };
+		1E13CA7F1E90C1DD000DBF74 /* PosterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PosterListViewController.h; path = View/PosterListViewController.h; sourceTree = "<group>"; };
+		1E13CA801E90C1DD000DBF74 /* PosterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PosterListViewController.m; path = View/PosterListViewController.m; sourceTree = "<group>"; };
+		1E13CA811E90C1DD000DBF74 /* PosterListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PosterListView.xib; path = View/PosterListView.xib; sourceTree = "<group>"; };
 		1E13CA891E90C297000DBF74 /* PhotoGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoGridViewController.h; path = View/PhotoGridViewController.h; sourceTree = "<group>"; };
 		1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoGridViewController.m; path = View/PhotoGridViewController.m; sourceTree = "<group>"; };
 		1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoGridView.xib; path = View/PhotoGridView.xib; sourceTree = "<group>"; };
@@ -93,6 +97,12 @@
 		1E5B4F131E8619DD003F1239 /* photowallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photowallTests.m; sourceTree = "<group>"; };
 		1E5B4F151E8619DD003F1239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E60634E1E90959E00C9501B /* photowall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = photowall.entitlements; sourceTree = "<group>"; };
+		1E9B850D1E9892430081B251 /* PosterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PosterCell.h; path = View/PosterCell.h; sourceTree = "<group>"; };
+		1E9B850E1E9892430081B251 /* PosterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PosterCell.m; path = View/PosterCell.m; sourceTree = "<group>"; };
+		1E9B850F1E9892430081B251 /* PosterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PosterCell.xib; path = View/PosterCell.xib; sourceTree = "<group>"; };
+		1E9B85121E98AF6C0081B251 /* photowallv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = photowallv2.xcdatamodel; sourceTree = "<group>"; };
+		1E9B85131E98B04F0081B251 /* Mapping2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Mapping2.xcmappingmodel; sourceTree = "<group>"; };
+		1E9B85161E98B7800081B251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = photowall/Base.lproj/Strings.strings; sourceTree = "<group>"; };
 		1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManagerTests.m; path = Model/AccountManagerTests.m; sourceTree = "<group>"; };
 		1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequestTests.m; path = RestClient/RestRequestTests.m; sourceTree = "<group>"; };
 		1EB8DF8D1E8F4B9300FB67B6 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/UserManager.h; sourceTree = "<group>"; };
@@ -221,6 +231,7 @@
 				1E5B4F021E8619DD003F1239 /* photowall.xcdatamodeld */,
 				1EB8DF961E8F988D00FB67B6 /* Images.xcassets */,
 				1E5B4EF61E8619DD003F1239 /* Supporting Files */,
+				1E9B85131E98B04F0081B251 /* Mapping2.xcmappingmodel */,
 			);
 			path = photowall;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 		1E5B4EF61E8619DD003F1239 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1E9B85151E98B7800081B251 /* Strings.strings */,
 				1E5B4EF71E8619DD003F1239 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -269,12 +281,15 @@
 				1E13CA7A1E90C1A5000DBF74 /* PhotoMapViewController.h */,
 				1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */,
 				1E13CA7C1E90C1A5000DBF74 /* PhotoMapView.xib */,
-				1E13CA7F1E90C1DD000DBF74 /* PhotoListViewController.h */,
-				1E13CA801E90C1DD000DBF74 /* PhotoListViewController.m */,
-				1E13CA811E90C1DD000DBF74 /* PhotoListView.xib */,
+				1E13CA7F1E90C1DD000DBF74 /* PosterListViewController.h */,
+				1E13CA801E90C1DD000DBF74 /* PosterListViewController.m */,
+				1E13CA811E90C1DD000DBF74 /* PosterListView.xib */,
 				1E13CA891E90C297000DBF74 /* PhotoGridViewController.h */,
 				1E13CA8A1E90C297000DBF74 /* PhotoGridViewController.m */,
 				1E13CA8B1E90C297000DBF74 /* PhotoGridView.xib */,
+				1E9B850D1E9892430081B251 /* PosterCell.h */,
+				1E9B850E1E9892430081B251 /* PosterCell.m */,
+				1E9B850F1E9892430081B251 /* PosterCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -414,11 +429,13 @@
 			files = (
 				1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */,
 				1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */,
+				1E9B85171E98B7800081B251 /* Strings.strings in Resources */,
 				1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */,
 				1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */,
+				1E9B85111E9892430081B251 /* PosterCell.xib in Resources */,
 				1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */,
 				1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */,
-				1E13CA831E90C1DD000DBF74 /* PhotoListView.xib in Resources */,
+				1E13CA831E90C1DD000DBF74 /* PosterListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,9 +546,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9B85101E9892430081B251 /* PosterCell.m in Sources */,
 				1EB8DF8F1E8F4B9300FB67B6 /* UserManager.m in Sources */,
 				1E18E7BB1E88EF4600200DC0 /* _User.m in Sources */,
-				1E13CA821E90C1DD000DBF74 /* PhotoListViewController.m in Sources */,
+				1E13CA821E90C1DD000DBF74 /* PosterListViewController.m in Sources */,
+				1E9B85141E98B04F0081B251 /* Mapping2.xcmappingmodel in Sources */,
 				1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */,
 				1E18E7B71E88EF3400200DC0 /* User.m in Sources */,
 				1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */,
@@ -573,11 +592,24 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		1E9B85151E98B7800081B251 /* Strings.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1E9B85161E98B7800081B251 /* Base */,
+			);
+			name = Strings.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1E5B4F161E8619DD003F1239 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -627,6 +659,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -762,9 +795,10 @@
 		1E5B4F021E8619DD003F1239 /* photowall.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				1E9B85121E98AF6C0081B251 /* photowallv2.xcdatamodel */,
 				1E5B4F031E8619DD003F1239 /* photowall.xcdatamodel */,
 			);
-			currentVersion = 1E5B4F031E8619DD003F1239 /* photowall.xcdatamodel */;
+			currentVersion = 1E9B85121E98AF6C0081B251 /* photowallv2.xcdatamodel */;
 			path = photowall.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

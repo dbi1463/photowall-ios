@@ -10,4 +10,6 @@
 
 @interface PhotoMapViewController : UIViewController
 
+@property (weak) UIViewController* rootViewController;
+
 @end

@@ -10,37 +10,50 @@
 
 #import "ProfileViewController.h"
 #import "PhotoMapViewController.h"
-#import "PhotoListViewController.h"
 #import "PhotoGridViewController.h"
+#import "PosterListViewController.h"
 
 #import "UIView+Utils.h"
 
 @implementation RootViewController {
 	ProfileViewController* _profileViewController;
 	PhotoMapViewController* _photoMapViewController;
-	PhotoListViewController* _photoListViewController;
 	PhotoGridViewController* _photoGridViewController;
+	PosterListViewController* _posterListViewController;
 
 	NSInteger _selectedIndex;
 	NSArray* _viewControllers;
+	NSArray* _titles;
 	UIViewController* _currentController;
 }
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	if ([self respondsToSelector:@selector(edgesForExtendedLayout)]) {
+		self.edgesForExtendedLayout = UIRectEdgeNone;
+	}
+
 	_selectedIndex = 0;
 
 	_profileViewController = [[ProfileViewController alloc] initWithNibName:@"ProfileView" bundle:nil];
 	_photoMapViewController = [[PhotoMapViewController alloc] initWithNibName:@"PhotoMapView" bundle:nil];
-	_photoListViewController = [[PhotoListViewController alloc] initWithNibName:@"PhotoListView" bundle:nil];
 	_photoGridViewController = [[PhotoGridViewController alloc] initWithNibName:@"PhotoGridView" bundle:nil];
+	_posterListViewController = [[PosterListViewController alloc] initWithNibName:@"PosterListView" bundle:nil];
 
-	_viewControllers = @[ _photoListViewController, _photoGridViewController, _photoMapViewController, _profileViewController ];
+	_viewControllers = @[ _posterListViewController, _photoGridViewController, _photoMapViewController, _profileViewController ];
 
 	_profileViewController.rootViewController = self;
 	_profileViewController.accountManager = self.accountManager;
 
+	_photoGridViewController.rootViewController = self;
+
+	_photoMapViewController.rootViewController = self;
+
+	_posterListViewController.rootViewController = self;
+	_posterListViewController.userManager = self.userManager;
+
 	[self setSelectedIndex:0];
+	[self setTitle:@"Posters"];
 }
 
 - (void)setSelectedIndex:(NSInteger)index {

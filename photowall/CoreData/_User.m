@@ -29,7 +29,33 @@
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {
 	NSSet *keyPaths = [super keyPathsForValuesAffectingValueForKey:key];
 
+	if ([key isEqualToString:@"favoriteValue"]) {
+		NSSet *affectingKey = [NSSet setWithObject:@"favorite"];
+		keyPaths = [keyPaths setByAddingObjectsFromSet:affectingKey];
+		return keyPaths;
+	}
+
 	return keyPaths;
+}
+
+@dynamic favorite;
+
+- (BOOL)favoriteValue {
+	NSNumber *result = [self favorite];
+	return [result boolValue];
+}
+
+- (void)setFavoriteValue:(BOOL)value_ {
+	[self setFavorite:@(value_)];
+}
+
+- (BOOL)primitiveFavoriteValue {
+	NSNumber *result = [self primitiveFavorite];
+	return [result boolValue];
+}
+
+- (void)setPrimitiveFavoriteValue:(BOOL)value_ {
+	[self setPrimitiveFavorite:@(value_)];
 }
 
 @dynamic identifier;
@@ -39,6 +65,9 @@
 @end
 
 @implementation UserAttributes 
++ (NSString *)favorite {
+	return @"favorite";
+}
 + (NSString *)identifier {
 	return @"identifier";
 }

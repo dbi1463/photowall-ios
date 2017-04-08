@@ -18,7 +18,7 @@
 @property (weak, nonatomic) IBOutlet UIButton* updateButton;
 @property (weak, nonatomic) IBOutlet UIButton* changePortraitButton;
 
-@property AccountManager* accountManager;
+@property (weak) AccountManager* accountManager;
 @property (weak) UIViewController* rootViewController;
 
 @end

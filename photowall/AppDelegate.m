@@ -48,6 +48,7 @@
 
 - (void)showRootView {
 	RootViewController* root = [[RootViewController alloc] initWithNibName:@"RootView" bundle:nil];
+	root.userManager = self.userManager;
 	root.accountManager = self.accountManager;
 	UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:root];
 	[self.window setRootViewController:navigation];

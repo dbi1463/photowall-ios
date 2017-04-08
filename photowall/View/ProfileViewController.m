@@ -19,6 +19,7 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	self.nicknameField.text = self.accountManager.me.nickname;
+	[self.rootViewController setTitle:@"Profile"];
 }
 
 - (IBAction)changePortraitButtonPressed:(id)sender {

@@ -20,23 +20,36 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
 @property (nonatomic, readonly, strong) UserID *objectID;
 
-@property (nonatomic, strong, nullable) NSString* identifier;
+@property (nonatomic, strong, nullable) NSNumber* favorite;
 
-@property (nonatomic, strong, nullable) NSString* nickname;
+@property (atomic) BOOL favoriteValue;
+- (BOOL)favoriteValue;
+- (void)setFavoriteValue:(BOOL)value_;
+
+@property (nonatomic, strong) NSString* identifier;
+
+@property (nonatomic, strong) NSString* nickname;
 
 @end
 
 @interface _User (CoreDataGeneratedPrimitiveAccessors)
 
-- (nullable NSString*)primitiveIdentifier;
-- (void)setPrimitiveIdentifier:(nullable NSString*)value;
+- (nullable NSNumber*)primitiveFavorite;
+- (void)setPrimitiveFavorite:(nullable NSNumber*)value;
 
-- (nullable NSString*)primitiveNickname;
-- (void)setPrimitiveNickname:(nullable NSString*)value;
+- (BOOL)primitiveFavoriteValue;
+- (void)setPrimitiveFavoriteValue:(BOOL)value_;
+
+- (NSString*)primitiveIdentifier;
+- (void)setPrimitiveIdentifier:(NSString*)value;
+
+- (NSString*)primitiveNickname;
+- (void)setPrimitiveNickname:(NSString*)value;
 
 @end
 
 @interface UserAttributes: NSObject 
++ (NSString *)favorite;
 + (NSString *)identifier;
 + (NSString *)nickname;
 @end

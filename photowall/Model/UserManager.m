@@ -30,6 +30,16 @@
 	return self;
 }
 
+- (void)markAsFavorite:(User*)user {
+	user.favoriteValue = YES;
+	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+}
+
+- (void)unmarkFavorite:(User*)user {
+	user.favoriteValue = NO;
+	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
+}
+
 - (void)synchronize {
 	[[_client path:@"/profiles"] get:^(RestResponse* response) {
 		if (response.succeeded) {
