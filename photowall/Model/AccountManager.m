@@ -72,6 +72,8 @@ NSString* const KeyChainGroup = @"com.picowork";
 
 - (void)logout {
 	[[_client path:@"/authentications/mine"] delete:[self removeAuthIfSucceeded]];
+	[User MR_truncateAll];
+	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (BOOL)logined {

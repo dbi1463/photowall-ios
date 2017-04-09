@@ -11,6 +11,8 @@
 #import "RestRequest.h"
 #import "RestResponse.h"
 
+FOUNDATION_EXPORT NSString* const DefaultEndPoint;
+
 @protocol RequestAuthenticator <NSObject>
 
 - (void)authenticate:(RestRequest*)request;

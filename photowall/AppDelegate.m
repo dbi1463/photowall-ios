@@ -25,7 +25,7 @@
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
 	KeyChainSecuredAuthenticator* authenticator = [KeyChainSecuredAuthenticator new];
-	_client = [[RestClient alloc] initWithEndPoint:@"http://localhost:4567/ws" andAuthenticator:authenticator];
+	_client = [[RestClient alloc] initWithEndPoint:DefaultEndPoint andAuthenticator:authenticator];
 	self.userManager = [[UserManager alloc] initWithClient:_client];
 	self.accountManager = [[AccountManager alloc] initWithClient:_client];
 	self.accountManager.authDelegate = self;

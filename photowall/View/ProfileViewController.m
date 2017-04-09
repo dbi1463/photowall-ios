@@ -10,6 +10,8 @@
 
 #import "User.h"
 
+#import "UIImageView+WebImage.h"
+
 @implementation ProfileViewController
 
 - (void)viewDidLoad {
@@ -18,8 +20,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	self.nicknameField.text = self.accountManager.me.nickname;
 	[self.rootViewController setTitle:@"Profile"];
+	[self updateAllViews];
 }
 
 - (IBAction)changePortraitButtonPressed:(id)sender {
@@ -51,6 +53,12 @@
 
 - (void)updateFailed:(NSError*)error {
 	
+}
+
+- (void)updateAllViews {
+	self.nicknameField.text = self.accountManager.me.nickname;
+	NSString* path = [NSString stringWithFormat:@"/portraits/%@", self.accountManager.me.identifier];
+	[self.portrait setImageWithPath:path andPlaceholder:nil];
 }
 
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString*, id> *)info {

@@ -33,6 +33,7 @@
 		1E9B85111E9892430081B251 /* PosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B850F1E9892430081B251 /* PosterCell.xib */; };
 		1E9B85141E98B04F0081B251 /* Mapping2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1E9B85131E98B04F0081B251 /* Mapping2.xcmappingmodel */; };
 		1E9B85171E98B7800081B251 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E9B85151E98B7800081B251 /* Strings.strings */; };
+		1E9E46491E99CF84008613AB /* UIImageView+WebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9E46481E99CF84008613AB /* UIImageView+WebImage.m */; };
 		1EA8159E1E89063F00AD4B0F /* AccountManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */; };
 		1EB67E7C1E88A07900BF4498 /* RestRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */; };
 		1EB8DF8F1E8F4B9300FB67B6 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */; };
@@ -103,6 +104,8 @@
 		1E9B85121E98AF6C0081B251 /* photowallv2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = photowallv2.xcdatamodel; sourceTree = "<group>"; };
 		1E9B85131E98B04F0081B251 /* Mapping2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = Mapping2.xcmappingmodel; sourceTree = "<group>"; };
 		1E9B85161E98B7800081B251 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = photowall/Base.lproj/Strings.strings; sourceTree = "<group>"; };
+		1E9E46471E99CF84008613AB /* UIImageView+WebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+WebImage.h"; path = "Utils/UIImageView+WebImage.h"; sourceTree = "<group>"; };
+		1E9E46481E99CF84008613AB /* UIImageView+WebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebImage.m"; path = "Utils/UIImageView+WebImage.m"; sourceTree = "<group>"; };
 		1EA8159D1E89063F00AD4B0F /* AccountManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AccountManagerTests.m; path = Model/AccountManagerTests.m; sourceTree = "<group>"; };
 		1EB67E7B1E88A07900BF4498 /* RestRequestTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequestTests.m; path = RestClient/RestRequestTests.m; sourceTree = "<group>"; };
 		1EB8DF8D1E8F4B9300FB67B6 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UserManager.h; path = Model/UserManager.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				1E18E7AF1E88E4AB00200DC0 /* NSString+Utils.m */,
 				1E13CA8E1E90CC8B000DBF74 /* UIView+Utils.h */,
 				1E13CA8F1E90CC8B000DBF74 /* UIView+Utils.m */,
+				1E9E46471E99CF84008613AB /* UIImageView+WebImage.h */,
+				1E9E46481E99CF84008613AB /* UIImageView+WebImage.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -567,6 +572,7 @@
 				1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */,
 				1E18E7A61E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m in Sources */,
 				1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */,
+				1E9E46491E99CF84008613AB /* UIImageView+WebImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

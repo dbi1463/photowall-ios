@@ -10,6 +10,8 @@
 
 #import "RestRequest.h"
 
+NSString* const DefaultEndPoint = @"http://localhost:4567/ws";
+
 @implementation RestClient {
 	NSString* _endPoint;
 	id<RequestAuthenticator> _authenticator;

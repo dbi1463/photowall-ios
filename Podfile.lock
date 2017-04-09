@@ -20,6 +20,9 @@ PODS:
   - NitroKeychain (1.0.0)
   - Nocilla (0.10.0)
   - OCMock (3.3)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
 
 DEPENDENCIES:
   - AFNetworking
@@ -27,6 +30,7 @@ DEPENDENCIES:
   - NitroKeychain
   - Nocilla
   - OCMock
+  - SDWebImage
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -34,7 +38,8 @@ SPEC CHECKSUMS:
   NitroKeychain: fd369241051bd8e4522ea4974577681d56c0d438
   Nocilla: ae0a2b05f3087b473624ac2b25903695df51246a
   OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
 
-PODFILE CHECKSUM: 645586aa96cf179e511efc910d3a37be4266e0ef
+PODFILE CHECKSUM: 6acdcbd3aa62633a7e6d2239d4b4997834b13957
 
 COCOAPODS: 1.2.0
