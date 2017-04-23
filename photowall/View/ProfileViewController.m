@@ -8,14 +8,20 @@
 
 #import "ProfileViewController.h"
 
+#import <Photos/Photos.h>
+
 #import "User.h"
 
 #import "UIImageView+WebImage.h"
 
 @implementation ProfileViewController
 
+#pragma mark - ViewController Lifecycle
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	self.accountManager.editDelegate = self;
+	self.portrait.layer.cornerRadius = 10;
+	self.portrait.layer.masksToBounds = YES;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -24,6 +30,7 @@
 	[self updateAllViews];
 }
 
+#pragma mark - IBActons
 - (IBAction)changePortraitButtonPressed:(id)sender {
 	UIImagePickerController* picker = [UIImagePickerController new];
 	picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -32,7 +39,6 @@
 }
 
 - (IBAction)updateButtonPressed:(id)sender {
-	self.accountManager.editDelegate = self;
 	[self.accountManager changeNickname:self.nicknameField.text];
 }
 
@@ -46,8 +52,9 @@
 	[self.accountManager logout];
 }
 
+#pragma mark - AccountEditDelegate
 - (void)accountUpdated {
-	self.nicknameField.text = self.accountManager.me.nickname;
+	[self updateAllViews];
 	[self.updateButton setEnabled:NO];
 }
 
@@ -55,17 +62,26 @@
 	
 }
 
-- (void)updateAllViews {
-	self.nicknameField.text = self.accountManager.me.nickname;
-	NSString* path = [NSString stringWithFormat:@"/portraits/%@", self.accountManager.me.identifier];
-	[self.portrait setImageWithPath:path andPlaceholder:nil];
-}
-
+#pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString*, id> *)info {
 	[picker dismissViewControllerAnimated:YES completion:nil];
-	UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
-	NSData* pngData = UIImagePNGRepresentation(image);
-	[self.accountManager changePortrait:pngData];
+	NSURL* url = [info valueForKey:UIImagePickerControllerReferenceURL];
+	PHAsset* asset = [[PHAsset fetchAssetsWithALAssetURLs:@[ url ] options:nil] firstObject];
+	PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];
+	options.resizeMode = PHImageRequestOptionsResizeModeExact;
+	options.normalizedCropRect = CGRectMake(0.5, 0.5, 320, 320);
+	[[PHImageManager defaultManager] requestImageDataForAsset:asset options:options resultHandler:^(NSData* imageData, NSString* dataUTI, UIImageOrientation orientation, NSDictionary* info) {
+		if (imageData != nil) {
+			[self.accountManager changePortrait:imageData];
+		}
+	}];
+}
+
+#pragma mark - Private Methods
+- (void)updateAllViews {
+	self.nicknameField.text = self.accountManager.me.nickname;
+	NSString* path = self.accountManager.me.portraitPath;
+	[self.portrait setImageWithPath:path andPlaceholder:nil];
 }
 
 @end

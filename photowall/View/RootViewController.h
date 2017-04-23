@@ -9,19 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @class UserManager;
+@class PhotoManager;
 @class AccountManager;
 
-@interface RootViewController : UIViewController
+@interface RootViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView* viewContainer;
 
 @property (weak, nonatomic) IBOutlet UIButton* gridTabButton;
 @property (weak, nonatomic) IBOutlet UIButton* profileTabButton;
-@property (weak, nonatomic) IBOutlet UIButton* allPhotoTabButton;
+@property (weak, nonatomic) IBOutlet UIButton* friendsTabButton;
 @property (weak, nonatomic) IBOutlet UIButton* photoMapTabButton;
 @property (weak, nonatomic) IBOutlet UIButton* takePictureTabButton;
 
 @property UserManager* userManager;
+@property PhotoManager* photoManager;
 @property AccountManager* accountManager;
 
 @end

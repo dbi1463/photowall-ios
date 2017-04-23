@@ -1,37 +1,43 @@
 //
-//  PosterListViewController.m
+//  FriendsViewController.m
 //  photowall
 //
 //  Created by Spirit on 4/2/17.
 //  Copyright © 2017 Picowork. All rights reserved.
 //
 
-#import "PosterListViewController.h"
+#import "FriendsViewController.h"
 
 #import "UserManager.h"
 
-#import "PosterCell.h"
+#import "FriendCell.h"
+#import "UIColor+Defaults.h"
 
-@implementation PosterListViewController {
-	NSArray* _posters;
+@implementation FriendsViewController {
+	NSArray* _friends;
 	NSMutableArray* _others;
 	NSMutableArray* _favorites;
 }
 
+#pragma mark - ViewController Lifecycle
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	_posters = [NSMutableArray new];
 	_favorites = [NSMutableArray new];
 	_others = [NSMutableArray new];
-	_posters = @[ _favorites, _others ];
-	[self updatePosters];
-	UINib* nib = [UINib nibWithNibName:@"PosterCell" bundle:nil];
-	[self.postersView registerNib:nib forCellReuseIdentifier:PosterCellIdentifier];
+	_friends = @[ _favorites, _others ];
+	[self updateFriends];
+	UINib* nib = [UINib nibWithNibName:@"FriendCell" bundle:nil];
+	[self.friendsView registerNib:nib forCellReuseIdentifier:FriendCellIdentifier];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.rootViewController setTitle:@"Posters"];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+	[super viewDidAppear:animated];
+	[self.friendsView reloadData];
 }
 
 #pragma mark - UITableViewDelegate
@@ -55,24 +61,34 @@
 	return (section == 0)? @"Favorites" : @"Others";
 }
 
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+	UILabel* label = [UILabel new];
+	UIFont* font = [UIFont systemFontOfSize:[UIFont labelFontSize]];
+	label.text = (section == 0)? @"  Favorites" : @"  Others";
+	label.font = font;
+	label.textColor = [UIColor main];
+	label.backgroundColor = [UIColor secondaryAuxiliary];
+	return label;
+}
+
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView {
-	return [_posters count];
+	return [_friends count];
 }
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
-	return [[_posters objectAtIndex:section] count];
+	return [[_friends objectAtIndex:section] count];
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
 	User* poster = [self userAtIndexPath:indexPath];
-	PosterCell* cell = [tableView dequeueReusableCellWithIdentifier:PosterCellIdentifier forIndexPath:indexPath];
-	[cell setPoster:poster];
+	FriendCell* cell = [tableView dequeueReusableCellWithIdentifier:FriendCellIdentifier forIndexPath:indexPath];
+	[cell setFriend:poster];
 	return cell;
 }
 
 #pragma mark - Private Methods
-- (void)updatePosters {
+- (void)updateFriends {
 	[_others removeAllObjects];
 	[_favorites removeAllObjects];
 	for (User* user in self.userManager.users) {
@@ -93,16 +109,16 @@
 	else {
 		[self.userManager markAsFavorite:user];
 	}
-	[self updatePosters];
+	[self updateFriends];
 	NSIndexPath* pathToInsert = [self indexPathOfPoster:user];
-	[self.postersView beginUpdates];
-	[self.postersView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationLeft];
-	[self.postersView insertRowsAtIndexPaths:@[ pathToInsert ] withRowAnimation:UITableViewRowAnimationRight];
-	[self.postersView endUpdates];
+	[self.friendsView beginUpdates];
+	[self.friendsView deleteRowsAtIndexPaths:@[ indexPath ] withRowAnimation:UITableViewRowAnimationLeft];
+	[self.friendsView insertRowsAtIndexPaths:@[ pathToInsert ] withRowAnimation:UITableViewRowAnimationRight];
+	[self.friendsView endUpdates];
 }
 
 - (User*)userAtIndexPath:(NSIndexPath*)indexPath {
-	return [[_posters objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+	return [[_friends objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 }
 
 - (NSIndexPath*)indexPathOfPoster:(User*)poster {

@@ -1,5 +1,5 @@
 //
-//  PosterCell.h
+//  FriendCell.h
 //  photowall
 //
 //  Created by Spirit on 4/8/17.
@@ -10,14 +10,14 @@
 
 @class User;
 
-FOUNDATION_EXPORT NSString* const PosterCellIdentifier;
+FOUNDATION_EXPORT NSString* const FriendCellIdentifier;
 
-@interface PosterCell : UITableViewCell
+@interface FriendCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel* nicknameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView* portraitView;
 @property (weak, nonatomic) IBOutlet UIImageView* favoriteView;
 
-- (void)setPoster:(User*)poster;
+- (void)setFriend:(User*)aFriend;
 
 @end

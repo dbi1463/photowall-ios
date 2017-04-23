@@ -40,6 +40,7 @@ NSString* const KeyChainGroup = @"com.picowork";
 	[[_client path:@"/portraits/mine"] upload:portrait withMethod:@"POST" andHandler:^(RestResponse* response) {
 		if (response.succeeded) {
 			[self.editDelegate accountUpdated];
+			_me.lastUpdated = [NSDate new];
 		}
 		else {
 			[self.editDelegate updateFailed:response.error];
@@ -121,6 +122,7 @@ NSString* const KeyChainGroup = @"com.picowork";
 	return ^(RestResponse* response) {
 		if (response.succeeded) {
 			_me.nickname = nickname;
+			_me.lastUpdated = [NSDate new];
 			[[NSManagedObjectContext MR_defaultContext] save:nil];
 			[self.editDelegate accountUpdated];
 		}

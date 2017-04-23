@@ -27,6 +27,7 @@
 	KeyChainSecuredAuthenticator* authenticator = [KeyChainSecuredAuthenticator new];
 	_client = [[RestClient alloc] initWithEndPoint:DefaultEndPoint andAuthenticator:authenticator];
 	self.userManager = [[UserManager alloc] initWithClient:_client];
+	self.photoManager = [[PhotoManager alloc] initWithClient:_client];
 	self.accountManager = [[AccountManager alloc] initWithClient:_client];
 	self.accountManager.authDelegate = self;
 	if (self.accountManager.logined) {
@@ -49,6 +50,7 @@
 - (void)showRootView {
 	RootViewController* root = [[RootViewController alloc] initWithNibName:@"RootView" bundle:nil];
 	root.userManager = self.userManager;
+	root.photoManager = self.photoManager;
 	root.accountManager = self.accountManager;
 	UINavigationController* navigation = [[UINavigationController alloc] initWithRootViewController:root];
 	[self.window setRootViewController:navigation];

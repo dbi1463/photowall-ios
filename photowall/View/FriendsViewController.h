@@ -1,5 +1,5 @@
 //
-//  PhotoListViewController.h
+//  FriendsViewController.h
 //  photowall
 //
 //  Created by Spirit on 4/2/17.
@@ -10,11 +10,11 @@
 
 @class UserManager;
 
-@interface PosterListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface FriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak) UserManager* userManager;
 @property (weak) UIViewController* rootViewController;
 
-@property (weak, nonatomic) IBOutlet UITableView* postersView;
+@property (weak, nonatomic) IBOutlet UITableView* friendsView;
 
 @end
