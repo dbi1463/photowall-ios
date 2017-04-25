@@ -52,6 +52,7 @@
 	_profileViewController.accountManager = self.accountManager;
 
 	_photoGridViewController.rootViewController = self;
+	_photoGridViewController.photoManager = self.photoManager;
 
 	_photoMapViewController.rootViewController = self;
 
@@ -98,6 +99,9 @@
 	[picker dismissViewControllerAnimated:YES completion:nil];
 	UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
 	NSData* pngData = UIImagePNGRepresentation(image);
+	[self.photoManager uploadPhoto:pngData withHandler:^(NSError* error, NSArray* photos) {
+		[_photoGridViewController refreshPhotos];
+	}];
 }
 
 @end

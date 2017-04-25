@@ -45,6 +45,10 @@
 		1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EB8DF921E8F830C00FB67B6 /* LoginViewController.m */; };
 		1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EB8DF931E8F830C00FB67B6 /* LoginView.xib */; };
 		1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EB8DF961E8F988D00FB67B6 /* Images.xcassets */; };
+		1EBCF1A71EAC8DCE00C2FDFA /* MaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCF1A61EAC8DCE00C2FDFA /* MaskView.xib */; };
+		1EBCF1AA1EAC8E8A00C2FDFA /* UIViewController+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCF1A91EAC8E8A00C2FDFA /* UIViewController+Mask.m */; };
+		1EBCF1AE1EAC929E00C2FDFA /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */; };
+		1EBCF1AF1EAC929E00C2FDFA /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */; };
 		1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8A1E86566100BA0D77 /* RestRequest.m */; };
 		1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8D1E86570600BA0D77 /* RestResponse.m */; };
 		1ECB6F911E86676200BA0D77 /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F901E86676200BA0D77 /* RestClient.m */; };
@@ -128,6 +132,12 @@
 		1EB8DF921E8F830C00FB67B6 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoginViewController.m; path = View/LoginViewController.m; sourceTree = "<group>"; };
 		1EB8DF931E8F830C00FB67B6 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginView.xib; path = View/LoginView.xib; sourceTree = "<group>"; };
 		1EB8DF961E8F988D00FB67B6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1EBCF1A61EAC8DCE00C2FDFA /* MaskView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MaskView.xib; path = View/MaskView.xib; sourceTree = "<group>"; };
+		1EBCF1A81EAC8E8A00C2FDFA /* UIViewController+Mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Mask.h"; path = "Utils/UIViewController+Mask.h"; sourceTree = "<group>"; };
+		1EBCF1A91EAC8E8A00C2FDFA /* UIViewController+Mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Mask.m"; path = "Utils/UIViewController+Mask.m"; sourceTree = "<group>"; };
+		1EBCF1AB1EAC929E00C2FDFA /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCell.h; path = View/PhotoCell.h; sourceTree = "<group>"; };
+		1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoCell.m; path = View/PhotoCell.m; sourceTree = "<group>"; };
+		1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoCell.xib; path = View/PhotoCell.xib; sourceTree = "<group>"; };
 		1ECB6F891E86566100BA0D77 /* RestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestRequest.h; path = RestClient/RestRequest.h; sourceTree = "<group>"; };
 		1ECB6F8A1E86566100BA0D77 /* RestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequest.m; path = RestClient/RestRequest.m; sourceTree = "<group>"; };
 		1ECB6F8C1E86570600BA0D77 /* RestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestResponse.h; path = RestClient/RestResponse.h; sourceTree = "<group>"; };
@@ -195,6 +205,8 @@
 				1E9E46481E99CF84008613AB /* UIImageView+WebImage.m */,
 				1E0804FD1E9D323700C43CEB /* UIColor+Defaults.h */,
 				1E0804FE1E9D323700C43CEB /* UIColor+Defaults.m */,
+				1EBCF1A81EAC8E8A00C2FDFA /* UIViewController+Mask.h */,
+				1EBCF1A91EAC8E8A00C2FDFA /* UIViewController+Mask.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -318,6 +330,10 @@
 				1E9B850D1E9892430081B251 /* FriendCell.h */,
 				1E9B850E1E9892430081B251 /* FriendCell.m */,
 				1E9B850F1E9892430081B251 /* FriendCell.xib */,
+				1EBCF1A61EAC8DCE00C2FDFA /* MaskView.xib */,
+				1EBCF1AB1EAC929E00C2FDFA /* PhotoCell.h */,
+				1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */,
+				1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -459,9 +475,11 @@
 				1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */,
 				1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */,
 				1E9B85171E98B7800081B251 /* Strings.strings in Resources */,
+				1EBCF1AF1EAC929E00C2FDFA /* PhotoCell.xib in Resources */,
 				1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */,
 				1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */,
 				1E9B85111E9892430081B251 /* FriendCell.xib in Resources */,
+				1EBCF1A71EAC8DCE00C2FDFA /* MaskView.xib in Resources */,
 				1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */,
 				1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */,
 				1E13CA831E90C1DD000DBF74 /* FriendsListView.xib in Resources */,
@@ -585,6 +603,7 @@
 				1E18E7B71E88EF3400200DC0 /* User.m in Sources */,
 				1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */,
 				1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */,
+				1EBCF1AA1EAC8E8A00C2FDFA /* UIViewController+Mask.m in Sources */,
 				1E5B4F041E8619DD003F1239 /* photowall.xcdatamodeld in Sources */,
 				1ECB6F911E86676200BA0D77 /* RestClient.m in Sources */,
 				1E9E46541E9A0341008613AB /* LocationAwarePhotoUploadTask.m in Sources */,
@@ -598,6 +617,7 @@
 				1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */,
 				1E9E464C1E99D853008613AB /* Photo.m in Sources */,
 				1E18E7A61E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m in Sources */,
+				1EBCF1AE1EAC929E00C2FDFA /* PhotoCell.m in Sources */,
 				1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */,
 				1E9E464F1E99D86B008613AB /* PhotoManager.m in Sources */,
 				1E9E46491E99CF84008613AB /* UIImageView+WebImage.m in Sources */,

@@ -32,11 +32,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
-	[self.rootViewController setTitle:@"Posters"];
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-	[super viewDidAppear:animated];
+	[self.rootViewController setTitle:@"Friends"];
 	[self.friendsView reloadData];
 }
 
@@ -63,7 +59,7 @@
 
 - (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
 	UILabel* label = [UILabel new];
-	UIFont* font = [UIFont systemFontOfSize:[UIFont labelFontSize]];
+	UIFont* font = [UIFont boldSystemFontOfSize:12];
 	label.text = (section == 0)? @"  Favorites" : @"  Others";
 	label.font = font;
 	label.textColor = [UIColor main];

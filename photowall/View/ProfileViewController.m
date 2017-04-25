@@ -13,6 +13,7 @@
 #import "User.h"
 
 #import "UIImageView+WebImage.h"
+#import "UIViewController+Mask.h"
 
 @implementation ProfileViewController
 
@@ -39,6 +40,7 @@
 }
 
 - (IBAction)updateButtonPressed:(id)sender {
+	[self showMask];
 	[self.accountManager changeNickname:self.nicknameField.text];
 }
 
@@ -54,17 +56,19 @@
 
 #pragma mark - AccountEditDelegate
 - (void)accountUpdated {
+	[self hideMask];
 	[self updateAllViews];
 	[self.updateButton setEnabled:NO];
 }
 
 - (void)updateFailed:(NSError*)error {
-	
+	[self hideMask];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController*)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString*, id> *)info {
 	[picker dismissViewControllerAnimated:YES completion:nil];
+	[self showMask];
 	NSURL* url = [info valueForKey:UIImagePickerControllerReferenceURL];
 	PHAsset* asset = [[PHAsset fetchAssetsWithALAssetURLs:@[ url ] options:nil] firstObject];
 	PHImageRequestOptions* options = [[PHImageRequestOptions alloc] init];

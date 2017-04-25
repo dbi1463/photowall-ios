@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PhotoGridViewController : UIViewController
+@class PhotoManager;
 
-@property (weak) UIViewController* rootViewController;
+@interface PhotoGridViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, weak) UIViewController* rootViewController;
+@property (nonatomic, weak) IBOutlet UICollectionView* photosView;
+
+@property (nonatomic, weak) PhotoManager* photoManager;
+
+- (void)refreshPhotos;
 
 @end

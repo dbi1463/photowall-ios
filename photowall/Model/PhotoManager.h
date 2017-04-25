@@ -14,7 +14,7 @@
 
 @class RestClient;
 
-typedef void(^PhotoHandler)(NSError*);
+typedef void(^PhotoHandler)(NSError* error, NSArray* photos);
 
 @interface PhotoManager : NSObject<CLLocationManagerDelegate>
 
@@ -26,6 +26,6 @@ typedef void(^PhotoHandler)(NSError*);
 
 - (void)loadMoreWithHandler:(PhotoHandler)handler;
 
-@property (nonatomic) NSArray* photos;
+@property (nonatomic, readonly) NSArray* photos;
 
 @end
