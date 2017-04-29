@@ -11,6 +11,7 @@
 #import <MapKit/MapKit.h>
 
 #import "Photo.h"
+#import "PhotoMapRegion.h"
 
 @class RestClient;
 
@@ -22,10 +23,8 @@ typedef void(^PhotoHandler)(NSError* error, NSArray* photos);
 
 - (void)uploadPhoto:(NSData*)photo withHandler:(PhotoHandler)handler;
 
-- (void)refreshWithHandler:(PhotoHandler)handler;
+- (void)loadPhotosAfter:(NSDate*)after before:(NSDate*)before ofUser:(NSString*)userId withHandler:(PhotoHandler)handler;
 
-- (void)loadMoreWithHandler:(PhotoHandler)handler;
-
-@property (nonatomic, readonly) NSArray* photos;
+- (void)loadPhotosNear:(PhotoMapRegion*)region withHandler:(PhotoHandler)handler;
 
 @end

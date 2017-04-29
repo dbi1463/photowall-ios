@@ -79,7 +79,7 @@ NSString* const KeyChainGroup = @"com.picowork";
 
 - (BOOL)logined {
 	NSString* token = [TNTKeychain load:KeyChainTokenKey];
-	return  token != nil;
+	return token != nil;
 }
 
 #pragma mark - Code Blocks

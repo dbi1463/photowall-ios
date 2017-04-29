@@ -26,4 +26,6 @@
 @property PhotoManager* photoManager;
 @property AccountManager* accountManager;
 
+- (void)showPhotosOfUser:(NSString*)userId;
+
 @end

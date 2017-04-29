@@ -14,7 +14,7 @@ FOUNDATION_EXPORT NSString* const PhotoCellIdentifier;
 
 @interface PhotoCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel* timestamp;
+@property (weak, nonatomic) IBOutlet UILabel* posterName;
 @property (weak, nonatomic) IBOutlet UIImageView* photoView;
 
 - (void)setPhoto:(Photo*)photo;

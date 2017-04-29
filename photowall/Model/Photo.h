@@ -24,7 +24,8 @@
 @property (nonatomic, readonly) NSDate* timestamp;
 @property (nonatomic, readonly) PhotoLocation* location;
 
-@property (nonatomic, readonly) NSString* portraitPath;
+@property (nonatomic, readonly) NSString* thumbnailPath;
+@property (nonatomic, readonly) NSString* fullSizeImagePath;
 
 @end
 

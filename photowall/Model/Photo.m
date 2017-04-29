@@ -22,8 +22,12 @@
 
 @implementation Photo
 
-- (NSString*)portraitPath {
+- (NSString*)fullSizeImagePath {
 	return [NSString stringWithFormat:@"/photos/%@", self.identifier];
+}
+
+- (NSString*)thumbnailPath {
+	return [NSString stringWithFormat:@"/photos/%@/thumbnail", self.identifier];
 }
 
 @end

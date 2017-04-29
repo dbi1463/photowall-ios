@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9tp-0K-XoS" userLabel="Photo"/>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-fq-i9r" userLabel="Date">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SU7-fq-i9r" userLabel="Name">
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="MV4-PB-KZL"/>
                         </constraints>
@@ -44,7 +44,7 @@
             </constraints>
             <connections>
                 <outlet property="photoView" destination="9tp-0K-XoS" id="K7k-cZ-jIM"/>
-                <outlet property="timestamp" destination="SU7-fq-i9r" id="com-Sj-hLc"/>
+                <outlet property="posterName" destination="SU7-fq-i9r" id="U5G-fp-awk"/>
             </connections>
         </collectionViewCell>
     </objects>

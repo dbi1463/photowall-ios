@@ -13,6 +13,8 @@
 #import "User.h"
 #import "RestClient.h"
 
+NSString* const UsersSynchronizedNotificationName = @"UsersSynchronized";
+
 @implementation UserManager {
 	RestClient* _client;
 	NSMutableDictionary* _users;
@@ -73,6 +75,7 @@
 		}
 	}
 	NSLog(@"synchronized %@ users", @([json count]));
+	[[NSNotificationCenter defaultCenter] postNotificationName:UsersSynchronizedNotificationName object:self userInfo:nil];
 	[[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:nil];
 }
 

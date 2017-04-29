@@ -52,6 +52,7 @@
 	_profileViewController.accountManager = self.accountManager;
 
 	_photoGridViewController.rootViewController = self;
+	_photoGridViewController.userManager = self.userManager;
 	_photoGridViewController.photoManager = self.photoManager;
 
 	_photoMapViewController.rootViewController = self;
@@ -63,23 +64,15 @@
 	[self setTitle:@"Friends"];
 }
 
-- (void)setSelectedIndex:(NSInteger)index {
-	if (index < 0 || index > [_viewControllers count]) {
-		return;
-	}
-	_selectedIndex = index;
-	for (NSUInteger i = 0; i < _tabButtons.count; i++) {
-		[[_tabButtons objectAtIndex:i] setSelected:(i == index)];
-	}
-	UIViewController* controller = [_viewControllers objectAtIndex:index];
-	if (_currentController == controller) {
-		return;
-	}
-	[_currentController.view removeFromSuperview];
-	[self.viewContainer addSubview:controller.view fit:YES];
-	_currentController = controller;
+- (void)showPhotosOfUser:(NSString*)userId {
+	PhotoGridViewController* controller = [[PhotoGridViewController alloc] initWithNibName:@"PhotoGridView" bundle:nil];
+	controller.posterId = userId;
+	controller.userManager = self.userManager;
+	controller.photoManager = self.photoManager;
+	[self.navigationController pushViewController:controller animated:YES];
 }
 
+#pragma mark - IBActions
 - (IBAction)tabButtonPressed:(id)sender {
 	if ([sender isKindOfClass:[UIButton class]]) {
 		UIButton* button = (UIButton*)sender;
@@ -95,6 +88,7 @@
 	[self presentViewController:picker animated:YES completion:nil];
 }
 
+#pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
 	[picker dismissViewControllerAnimated:YES completion:nil];
 	UIImage* image = [info valueForKey:UIImagePickerControllerOriginalImage];
@@ -102,6 +96,24 @@
 	[self.photoManager uploadPhoto:pngData withHandler:^(NSError* error, NSArray* photos) {
 		[_photoGridViewController refreshPhotos];
 	}];
+}
+
+#pragma mark - Private Methods
+- (void)setSelectedIndex:(NSInteger)index {
+	if (index < 0 || index > [_viewControllers count]) {
+		return;
+	}
+	_selectedIndex = index;
+	for (NSUInteger i = 0; i < _tabButtons.count; i++) {
+		[[_tabButtons objectAtIndex:i] setSelected:(i == index)];
+	}
+	UIViewController* controller = [_viewControllers objectAtIndex:index];
+	if (_currentController == controller) {
+		return;
+	}
+	[_currentController.view removeFromSuperview];
+	[self.viewContainer addSubview:controller.view fit:YES];
+	_currentController = controller;
 }
 
 @end

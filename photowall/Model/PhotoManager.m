@@ -11,17 +11,17 @@
 #import "RestClient.h"
 #import "LocationAwarePhotoUploadTask.h"
 
+#import "NSDate+Utils.h"
+
 @implementation PhotoManager {
 	RestClient* _client;
 	NSMutableArray* _tasks;
-	NSMutableArray* _photos;
 }
 
 #pragma mark - Initializers
 - (instancetype)initWithClient:(RestClient*)client {
 	if (self = [super init]) {
 		_client = client;
-		_photos = [NSMutableArray new];
 		_tasks = [NSMutableArray new];
 	}
 	return self;
@@ -33,23 +33,49 @@
 	[_tasks addObject:task];
 	[task uploadWithClient:_client andHandler:^(NSError* error, NSArray* photos) {
 		[_tasks removeObject:task];
-		for (Photo* photo in photos) {
-			[self addPhoto:photo];
-		}
 		if (handler != nil) {
 			handler(error, photos);
 		}
 	}];
 }
 
-- (void)refreshWithHandler:(PhotoHandler)handler {
-	[[_client path:@"/photos"] get:^(RestResponse* response) {
+- (void)loadPhotosAfter:(NSDate*)after before:(NSDate*)before ofUser:(NSString*)userId withHandler:(PhotoHandler)handler {
+	RestRequest* request = [_client path:@"/photos"];
+	if (after != nil) {
+		[request query:@"after" withValue:after.timestampInMilliseconds];
+	}
+	if (before != nil) {
+		[request query:@"before" withValue:before.timestampInMilliseconds];
+	}
+	if (userId != nil) {
+		[request query:@"poster" withValue:userId];
+	}
+	[request get:[self forwardPhotos:handler]];
+}
+
+- (void)loadPhotosNear:(PhotoMapRegion*)region withHandler:(PhotoHandler)handler {
+	if (region == nil) {
+		if (handler != nil) {
+			handler(nil, @[]);
+		}
+		return;
+	}
+	NSString* geolocation = [NSString stringWithFormat:@"geo:%@,%@;r=%@", @(region.latitude), @(region.longitude), @(region.radius)];
+	RestRequest* request = [_client path:@"/photos/nearby"];
+	[request setValue:geolocation forHeader:@"Geolocation"];
+	[request get:[self forwardPhotos:handler]];
+}
+
+#pragma mark - Code Blocks
+- (ResponseHandler)forwardPhotos:(PhotoHandler)handler {
+	return ^(RestResponse* response) {
 		if (response.succeeded) {
+			NSMutableArray* photos = [NSMutableArray new];
 			for (id json in response.result) {
-				[self addPhoto:[Photo photoFromJson:json]];
+				[photos addObject:[Photo photoFromJson:json]];
 			}
 			if (handler) {
-				handler(nil, _photos);
+				handler(nil, photos);
 			}
 		}
 		else {
@@ -57,24 +83,7 @@
 				handler(response.error, nil);
 			}
 		}
-	}];
-}
-
-- (void)loadMoreWithHandler:(PhotoHandler)handler {
-	
-}
-
-- (NSArray*)photos {
-	return _photos;
-}
-
-#pragma mark - Private Methods
-- (void)addPhoto:(Photo*)photo {
-	NSArray* results = [_photos filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"identifier == %@", photo.identifier]];
-	if (results.count > 0) {
-		[_photos removeObjectsInArray:results];
-	}
-	[_photos addObject:photo];
+	};
 }
 
 @end

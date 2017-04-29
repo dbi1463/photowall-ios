@@ -12,6 +12,8 @@
 
 @class RestClient;
 
+FOUNDATION_EXPORT NSString* const UsersSynchronizedNotificationName;
+
 @interface UserManager : NSObject
 
 - (instancetype)initWithClient:(RestClient*)client;

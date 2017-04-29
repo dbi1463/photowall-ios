@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface PhotoMapViewController : UIViewController
+@interface PhotoMapViewController : UIViewController<MKMapViewDelegate>
 
-@property (weak) UIViewController* rootViewController;
+@property (weak, nonatomic) UIViewController* rootViewController;
+
+@property (weak, nonatomic) IBOutlet MKMapView* mapView;
 
 @end

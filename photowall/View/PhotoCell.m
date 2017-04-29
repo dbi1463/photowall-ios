@@ -17,10 +17,7 @@ NSString* const PhotoCellIdentifier = @"PhotoCell";
 @implementation PhotoCell
 
 - (void)setPhoto:(Photo*)photo {
-	[self.photoView setImageWithPath:photo.portraitPath andPlaceholder:nil];
-	NSDateFormatter* formatter = [NSDateFormatter new];
-	formatter.dateFormat = @"YYYY/MM/dd";
-	self.timestamp.text = [formatter stringFromDate:photo.timestamp];
+	[self.photoView setImageWithPath:photo.thumbnailPath andPlaceholder:nil];
 }
 
 @end

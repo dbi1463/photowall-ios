@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @class UserManager;
+@class RootViewController;
 
 @interface FriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak) UserManager* userManager;
-@property (weak) UIViewController* rootViewController;
+@property (weak) RootViewController* rootViewController;
 
 @property (weak, nonatomic) IBOutlet UITableView* friendsView;
 

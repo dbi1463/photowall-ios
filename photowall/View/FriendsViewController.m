@@ -11,6 +11,8 @@
 #import "UserManager.h"
 
 #import "FriendCell.h"
+#import "RootViewController.h"
+
 #import "UIColor+Defaults.h"
 
 @implementation FriendsViewController {
@@ -28,12 +30,17 @@
 	[self updateFriends];
 	UINib* nib = [UINib nibWithNibName:@"FriendCell" bundle:nil];
 	[self.friendsView registerNib:nib forCellReuseIdentifier:FriendCellIdentifier];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(usersSynchronized) name:UsersSynchronizedNotificationName object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.rootViewController setTitle:@"Friends"];
 	[self.friendsView reloadData];
+}
+
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - UITableViewDelegate
@@ -51,6 +58,8 @@
 
 - (void)tableView:(UITableView*)tableView didSelectRowAtIndexPath:(NSIndexPath*)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:NO];
+	User* user = [self userAtIndexPath:indexPath];
+	[self.rootViewController showPhotosOfUser:user.identifier];
 }
 
 - (NSString*)tableView:(UITableView*)tableView titleForHeaderInSection:(NSInteger)section {
@@ -84,6 +93,11 @@
 }
 
 #pragma mark - Private Methods
+- (void)usersSynchronized {
+	[self updateFriends];
+	[self.friendsView reloadData];
+}
+
 - (void)updateFriends {
 	[_others removeAllObjects];
 	[_favorites removeAllObjects];

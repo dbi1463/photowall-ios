@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0901072C0D2144C2D01D103C /* Pods_photowall_photowallTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D7C38FF52C51B46ED445C4 /* Pods_photowall_photowallTests.framework */; };
 		1E0804FF1E9D323700C43CEB /* UIColor+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0804FE1E9D323700C43CEB /* UIColor+Defaults.m */; };
+		1E0DCDFA1EB4656100C6316E /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DCDF91EB4656100C6316E /* NSDate+Utils.m */; };
+		1E0DCDFE1EB4781800C6316E /* PhotoGridSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DCDFC1EB4781800C6316E /* PhotoGridSectionHeader.m */; };
+		1E0DCDFF1EB4781800C6316E /* PhotoGridSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E0DCDFD1EB4781800C6316E /* PhotoGridSectionHeader.xib */; };
+		1E0DCE051EB48B2100C6316E /* PhotoMapRegion.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DCE041EB48B2100C6316E /* PhotoMapRegion.m */; };
+		1E0DCE081EB48CBC00C6316E /* PhotoMapRegion+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0DCE071EB48CBC00C6316E /* PhotoMapRegion+Utils.m */; };
 		1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA761E90C164000DBF74 /* ProfileViewController.m */; };
 		1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E13CA771E90C164000DBF74 /* ProfileView.xib */; };
 		1E13CA7D1E90C1A5000DBF74 /* PhotoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E13CA7B1E90C1A5000DBF74 /* PhotoMapViewController.m */; };
@@ -72,6 +77,15 @@
 		1AE073FC1196A431F3A8B0B9 /* Pods-photowall.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall.release.xcconfig"; path = "Pods/Target Support Files/Pods-photowall/Pods-photowall.release.xcconfig"; sourceTree = "<group>"; };
 		1E0804FD1E9D323700C43CEB /* UIColor+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+Defaults.h"; path = "Utils/UIColor+Defaults.h"; sourceTree = "<group>"; };
 		1E0804FE1E9D323700C43CEB /* UIColor+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Defaults.m"; path = "Utils/UIColor+Defaults.m"; sourceTree = "<group>"; };
+		1E0DCDF81EB4656100C6316E /* NSDate+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Utils.h"; path = "Utils/NSDate+Utils.h"; sourceTree = "<group>"; };
+		1E0DCDF91EB4656100C6316E /* NSDate+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Utils.m"; path = "Utils/NSDate+Utils.m"; sourceTree = "<group>"; };
+		1E0DCDFB1EB4781800C6316E /* PhotoGridSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoGridSectionHeader.h; path = View/PhotoGridSectionHeader.h; sourceTree = "<group>"; };
+		1E0DCDFC1EB4781800C6316E /* PhotoGridSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoGridSectionHeader.m; path = View/PhotoGridSectionHeader.m; sourceTree = "<group>"; };
+		1E0DCDFD1EB4781800C6316E /* PhotoGridSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoGridSectionHeader.xib; path = View/PhotoGridSectionHeader.xib; sourceTree = "<group>"; };
+		1E0DCE031EB48B2100C6316E /* PhotoMapRegion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoMapRegion.h; path = Model/PhotoMapRegion.h; sourceTree = "<group>"; };
+		1E0DCE041EB48B2100C6316E /* PhotoMapRegion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoMapRegion.m; path = Model/PhotoMapRegion.m; sourceTree = "<group>"; };
+		1E0DCE061EB48CBC00C6316E /* PhotoMapRegion+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PhotoMapRegion+Utils.h"; path = "Utils/PhotoMapRegion+Utils.h"; sourceTree = "<group>"; };
+		1E0DCE071EB48CBC00C6316E /* PhotoMapRegion+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "PhotoMapRegion+Utils.m"; path = "Utils/PhotoMapRegion+Utils.m"; sourceTree = "<group>"; };
 		1E13CA751E90C164000DBF74 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfileViewController.h; path = View/ProfileViewController.h; sourceTree = "<group>"; };
 		1E13CA761E90C164000DBF74 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfileViewController.m; path = View/ProfileViewController.m; sourceTree = "<group>"; };
 		1E13CA771E90C164000DBF74 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProfileView.xib; path = View/ProfileView.xib; sourceTree = "<group>"; };
@@ -178,6 +192,8 @@
 		1E18E7AC1E88E1B600200DC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1E0DCE031EB48B2100C6316E /* PhotoMapRegion.h */,
+				1E0DCE041EB48B2100C6316E /* PhotoMapRegion.m */,
 				1EB8DF8D1E8F4B9300FB67B6 /* UserManager.h */,
 				1EB8DF8E1E8F4B9300FB67B6 /* UserManager.m */,
 				1E18E7B51E88EF3400200DC0 /* User.h */,
@@ -207,6 +223,10 @@
 				1E0804FE1E9D323700C43CEB /* UIColor+Defaults.m */,
 				1EBCF1A81EAC8E8A00C2FDFA /* UIViewController+Mask.h */,
 				1EBCF1A91EAC8E8A00C2FDFA /* UIViewController+Mask.m */,
+				1E0DCDF81EB4656100C6316E /* NSDate+Utils.h */,
+				1E0DCDF91EB4656100C6316E /* NSDate+Utils.m */,
+				1E0DCE061EB48CBC00C6316E /* PhotoMapRegion+Utils.h */,
+				1E0DCE071EB48CBC00C6316E /* PhotoMapRegion+Utils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -334,6 +354,9 @@
 				1EBCF1AB1EAC929E00C2FDFA /* PhotoCell.h */,
 				1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */,
 				1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */,
+				1E0DCDFB1EB4781800C6316E /* PhotoGridSectionHeader.h */,
+				1E0DCDFC1EB4781800C6316E /* PhotoGridSectionHeader.m */,
+				1E0DCDFD1EB4781800C6316E /* PhotoGridSectionHeader.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -477,6 +500,7 @@
 				1E9B85171E98B7800081B251 /* Strings.strings in Resources */,
 				1EBCF1AF1EAC929E00C2FDFA /* PhotoCell.xib in Resources */,
 				1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */,
+				1E0DCDFF1EB4781800C6316E /* PhotoGridSectionHeader.xib in Resources */,
 				1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */,
 				1E9B85111E9892430081B251 /* FriendCell.xib in Resources */,
 				1EBCF1A71EAC8DCE00C2FDFA /* MaskView.xib in Resources */,
@@ -598,9 +622,11 @@
 				1E18E7BB1E88EF4600200DC0 /* _User.m in Sources */,
 				1E13CA821E90C1DD000DBF74 /* FriendsViewController.m in Sources */,
 				1E9B85141E98B04F0081B251 /* Mapping2.xcmappingmodel in Sources */,
+				1E0DCE051EB48B2100C6316E /* PhotoMapRegion.m in Sources */,
 				1E0804FF1E9D323700C43CEB /* UIColor+Defaults.m in Sources */,
 				1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */,
 				1E18E7B71E88EF3400200DC0 /* User.m in Sources */,
+				1E0DCDFA1EB4656100C6316E /* NSDate+Utils.m in Sources */,
 				1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */,
 				1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */,
 				1EBCF1AA1EAC8E8A00C2FDFA /* UIViewController+Mask.m in Sources */,
@@ -616,7 +642,9 @@
 				1E13CA901E90CC8B000DBF74 /* UIView+Utils.m in Sources */,
 				1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */,
 				1E9E464C1E99D853008613AB /* Photo.m in Sources */,
+				1E0DCE081EB48CBC00C6316E /* PhotoMapRegion+Utils.m in Sources */,
 				1E18E7A61E88C1A500200DC0 /* KeyChainSecuredAuthenticator.m in Sources */,
+				1E0DCDFE1EB4781800C6316E /* PhotoGridSectionHeader.m in Sources */,
 				1EBCF1AE1EAC929E00C2FDFA /* PhotoCell.m in Sources */,
 				1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */,
 				1E9E464F1E99D86B008613AB /* PhotoManager.m in Sources */,
