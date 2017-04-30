@@ -29,6 +29,7 @@
                 <constraint firstItem="g3n-hg-vdF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="UU9-dc-WSr"/>
                 <constraint firstAttribute="trailing" secondItem="g3n-hg-vdF" secondAttribute="trailing" id="qms-bN-mKs"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>

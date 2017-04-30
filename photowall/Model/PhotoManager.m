@@ -61,7 +61,7 @@
 		return;
 	}
 	NSString* geolocation = [NSString stringWithFormat:@"geo:%@,%@;r=%@", @(region.latitude), @(region.longitude), @(region.radius)];
-	RestRequest* request = [_client path:@"/photos/nearby"];
+	RestRequest* request = [_client path:@"/nearby-photos"];
 	[request setValue:geolocation forHeader:@"Geolocation"];
 	[request get:[self forwardPhotos:handler]];
 }

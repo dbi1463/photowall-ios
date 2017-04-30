@@ -13,12 +13,16 @@
 + (PhotoMapRegion*)fromMKCoordinateRegion:(MKCoordinateRegion)region {
 	double latitude = region.center.latitude;
 	double longitude = region.center.longitude;
-	return [[PhotoMapRegion alloc] initWithLatitude:latitude longitude:longitude andRadius:0];
+	CLLocation* loc1 = [[CLLocation alloc] initWithLatitude:(region.center.latitude - region.span.latitudeDelta * 0.5) longitude:region.center.longitude];
+	CLLocation* loc2 = [[CLLocation alloc] initWithLatitude:(region.center.latitude + region.span.latitudeDelta * 0.5) longitude:region.center.longitude];
+	double radius = [loc1 distanceFromLocation:loc2] / 1000;
+	return [[PhotoMapRegion alloc] initWithLatitude:latitude longitude:longitude andRadius:radius];
 }
 
 - (MKCoordinateRegion)toMKCoordinateRegion {
 	CLLocationCoordinate2D center = CLLocationCoordinate2DMake(self.latitude, self.longitude);
-	return MKCoordinateRegionMake(center, MKCoordinateSpanMake(0, 0));
+	double meters = self.radius * 1000;
+	return MKCoordinateRegionMakeWithDistance(center, meters, meters);
 }
 
 @end

@@ -56,6 +56,8 @@
 	_photoGridViewController.photoManager = self.photoManager;
 
 	_photoMapViewController.rootViewController = self;
+	_photoMapViewController.userManager = self.userManager;
+	_photoMapViewController.photoManager = self.photoManager;
 
 	_friendsViewController.rootViewController = self;
 	_friendsViewController.userManager = self.userManager;

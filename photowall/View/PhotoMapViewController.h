@@ -9,10 +9,16 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
+@class UserManager;
+@class PhotoManager;
+
 @interface PhotoMapViewController : UIViewController<MKMapViewDelegate>
 
 @property (weak, nonatomic) UIViewController* rootViewController;
 
 @property (weak, nonatomic) IBOutlet MKMapView* mapView;
+
+@property (weak, nonatomic) UserManager* userManager;
+@property (weak, nonatomic) PhotoManager* photoManager;
 
 @end

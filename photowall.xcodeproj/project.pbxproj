@@ -54,11 +54,18 @@
 		1EBCF1AA1EAC8E8A00C2FDFA /* UIViewController+Mask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCF1A91EAC8E8A00C2FDFA /* UIViewController+Mask.m */; };
 		1EBCF1AE1EAC929E00C2FDFA /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */; };
 		1EBCF1AF1EAC929E00C2FDFA /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */; };
+		1EC8C3CD1EB4E0B600029BF0 /* PhotoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC8C3CC1EB4E0B600029BF0 /* PhotoAnnotation.m */; };
 		1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8A1E86566100BA0D77 /* RestRequest.m */; };
 		1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F8D1E86570600BA0D77 /* RestResponse.m */; };
 		1ECB6F911E86676200BA0D77 /* RestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECB6F901E86676200BA0D77 /* RestClient.m */; };
 		1ED6B94F1E8FE31700CF0D63 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ED6B94D1E8FE31700CF0D63 /* RootViewController.m */; };
 		1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ED6B94E1E8FE31700CF0D63 /* RootView.xib */; };
+		1EDAF8771EB5891600BC48B3 /* AnnotationCallOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF8761EB5891600BC48B3 /* AnnotationCallOutView.m */; };
+		1EDAF8791EB5893700BC48B3 /* AnnotationCallOutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF8781EB5893700BC48B3 /* AnnotationCallOutView.xib */; };
+		1EDAF87D1EB5930100BC48B3 /* PhotoShowcaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF87B1EB5930100BC48B3 /* PhotoShowcaseViewController.m */; };
+		1EDAF87E1EB5930100BC48B3 /* PhotoShowcaseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF87C1EB5930100BC48B3 /* PhotoShowcaseView.xib */; };
+		1EDAF8821EB5AD6600BC48B3 /* PhotoShowcaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EDAF8801EB5AD6600BC48B3 /* PhotoShowcaseCell.m */; };
+		1EDAF8831EB5AD6600BC48B3 /* PhotoShowcaseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EDAF8811EB5AD6600BC48B3 /* PhotoShowcaseCell.xib */; };
 		A42F12C6F93B51B41D5130A9 /* Pods_photowall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B074D81CFA303000C95BAFFD /* Pods_photowall.framework */; };
 /* End PBXBuildFile section */
 
@@ -152,6 +159,8 @@
 		1EBCF1AB1EAC929E00C2FDFA /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoCell.h; path = View/PhotoCell.h; sourceTree = "<group>"; };
 		1EBCF1AC1EAC929E00C2FDFA /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoCell.m; path = View/PhotoCell.m; sourceTree = "<group>"; };
 		1EBCF1AD1EAC929E00C2FDFA /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoCell.xib; path = View/PhotoCell.xib; sourceTree = "<group>"; };
+		1EC8C3CB1EB4E0B600029BF0 /* PhotoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoAnnotation.h; path = View/PhotoAnnotation.h; sourceTree = "<group>"; };
+		1EC8C3CC1EB4E0B600029BF0 /* PhotoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoAnnotation.m; path = View/PhotoAnnotation.m; sourceTree = "<group>"; };
 		1ECB6F891E86566100BA0D77 /* RestRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestRequest.h; path = RestClient/RestRequest.h; sourceTree = "<group>"; };
 		1ECB6F8A1E86566100BA0D77 /* RestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestRequest.m; path = RestClient/RestRequest.m; sourceTree = "<group>"; };
 		1ECB6F8C1E86570600BA0D77 /* RestResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestResponse.h; path = RestClient/RestResponse.h; sourceTree = "<group>"; };
@@ -161,6 +170,15 @@
 		1ED6B94C1E8FE31700CF0D63 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootViewController.h; path = View/RootViewController.h; sourceTree = "<group>"; };
 		1ED6B94D1E8FE31700CF0D63 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootViewController.m; path = View/RootViewController.m; sourceTree = "<group>"; };
 		1ED6B94E1E8FE31700CF0D63 /* RootView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RootView.xib; path = View/RootView.xib; sourceTree = "<group>"; };
+		1EDAF8751EB5891600BC48B3 /* AnnotationCallOutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnnotationCallOutView.h; path = View/AnnotationCallOutView.h; sourceTree = "<group>"; };
+		1EDAF8761EB5891600BC48B3 /* AnnotationCallOutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnnotationCallOutView.m; path = View/AnnotationCallOutView.m; sourceTree = "<group>"; };
+		1EDAF8781EB5893700BC48B3 /* AnnotationCallOutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AnnotationCallOutView.xib; path = View/AnnotationCallOutView.xib; sourceTree = "<group>"; };
+		1EDAF87A1EB5930100BC48B3 /* PhotoShowcaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoShowcaseViewController.h; path = View/PhotoShowcaseViewController.h; sourceTree = "<group>"; };
+		1EDAF87B1EB5930100BC48B3 /* PhotoShowcaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoShowcaseViewController.m; path = View/PhotoShowcaseViewController.m; sourceTree = "<group>"; };
+		1EDAF87C1EB5930100BC48B3 /* PhotoShowcaseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoShowcaseView.xib; path = View/PhotoShowcaseView.xib; sourceTree = "<group>"; };
+		1EDAF87F1EB5AD6600BC48B3 /* PhotoShowcaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoShowcaseCell.h; path = View/PhotoShowcaseCell.h; sourceTree = "<group>"; };
+		1EDAF8801EB5AD6600BC48B3 /* PhotoShowcaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoShowcaseCell.m; path = View/PhotoShowcaseCell.m; sourceTree = "<group>"; };
+		1EDAF8811EB5AD6600BC48B3 /* PhotoShowcaseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PhotoShowcaseCell.xib; path = View/PhotoShowcaseCell.xib; sourceTree = "<group>"; };
 		1F738D6CE5D212EC55F2FBF6 /* Pods-photowall-photowallTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall-photowallTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photowall-photowallTests/Pods-photowall-photowallTests.debug.xcconfig"; sourceTree = "<group>"; };
 		432CC38A78A17AE6E9B86F05 /* Pods-photowall-photowallTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall-photowallTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-photowall-photowallTests/Pods-photowall-photowallTests.release.xcconfig"; sourceTree = "<group>"; };
 		A7409AB7651B0C1BE9424086 /* Pods-photowall.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-photowall.debug.xcconfig"; path = "Pods/Target Support Files/Pods-photowall/Pods-photowall.debug.xcconfig"; sourceTree = "<group>"; };
@@ -357,6 +375,17 @@
 				1E0DCDFB1EB4781800C6316E /* PhotoGridSectionHeader.h */,
 				1E0DCDFC1EB4781800C6316E /* PhotoGridSectionHeader.m */,
 				1E0DCDFD1EB4781800C6316E /* PhotoGridSectionHeader.xib */,
+				1EC8C3CB1EB4E0B600029BF0 /* PhotoAnnotation.h */,
+				1EC8C3CC1EB4E0B600029BF0 /* PhotoAnnotation.m */,
+				1EDAF8751EB5891600BC48B3 /* AnnotationCallOutView.h */,
+				1EDAF8761EB5891600BC48B3 /* AnnotationCallOutView.m */,
+				1EDAF8781EB5893700BC48B3 /* AnnotationCallOutView.xib */,
+				1EDAF87A1EB5930100BC48B3 /* PhotoShowcaseViewController.h */,
+				1EDAF87B1EB5930100BC48B3 /* PhotoShowcaseViewController.m */,
+				1EDAF87C1EB5930100BC48B3 /* PhotoShowcaseView.xib */,
+				1EDAF87F1EB5AD6600BC48B3 /* PhotoShowcaseCell.h */,
+				1EDAF8801EB5AD6600BC48B3 /* PhotoShowcaseCell.m */,
+				1EDAF8811EB5AD6600BC48B3 /* PhotoShowcaseCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -497,16 +526,19 @@
 			files = (
 				1EB8DF951E8F830C00FB67B6 /* LoginView.xib in Resources */,
 				1EB8DF971E8F988D00FB67B6 /* Images.xcassets in Resources */,
+				1EDAF87E1EB5930100BC48B3 /* PhotoShowcaseView.xib in Resources */,
 				1E9B85171E98B7800081B251 /* Strings.strings in Resources */,
 				1EBCF1AF1EAC929E00C2FDFA /* PhotoCell.xib in Resources */,
 				1E13CA791E90C164000DBF74 /* ProfileView.xib in Resources */,
 				1E0DCDFF1EB4781800C6316E /* PhotoGridSectionHeader.xib in Resources */,
 				1E13CA8D1E90C297000DBF74 /* PhotoGridView.xib in Resources */,
+				1EDAF8831EB5AD6600BC48B3 /* PhotoShowcaseCell.xib in Resources */,
 				1E9B85111E9892430081B251 /* FriendCell.xib in Resources */,
 				1EBCF1A71EAC8DCE00C2FDFA /* MaskView.xib in Resources */,
 				1E13CA7E1E90C1A5000DBF74 /* PhotoMapView.xib in Resources */,
 				1ED6B9501E8FE31700CF0D63 /* RootView.xib in Resources */,
 				1E13CA831E90C1DD000DBF74 /* FriendsListView.xib in Resources */,
+				1EDAF8791EB5893700BC48B3 /* AnnotationCallOutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,9 +656,11 @@
 				1E9B85141E98B04F0081B251 /* Mapping2.xcmappingmodel in Sources */,
 				1E0DCE051EB48B2100C6316E /* PhotoMapRegion.m in Sources */,
 				1E0804FF1E9D323700C43CEB /* UIColor+Defaults.m in Sources */,
+				1EDAF87D1EB5930100BC48B3 /* PhotoShowcaseViewController.m in Sources */,
 				1EB8DF941E8F830C00FB67B6 /* LoginViewController.m in Sources */,
 				1E18E7B71E88EF3400200DC0 /* User.m in Sources */,
 				1E0DCDFA1EB4656100C6316E /* NSDate+Utils.m in Sources */,
+				1EC8C3CD1EB4E0B600029BF0 /* PhotoAnnotation.m in Sources */,
 				1E13CA781E90C164000DBF74 /* ProfileViewController.m in Sources */,
 				1ECB6F8E1E86570600BA0D77 /* RestResponse.m in Sources */,
 				1EBCF1AA1EAC8E8A00C2FDFA /* UIViewController+Mask.m in Sources */,
@@ -640,6 +674,7 @@
 				1E18E7B01E88E4AB00200DC0 /* NSString+Utils.m in Sources */,
 				1E18E7AB1E88E1B000200DC0 /* AccountManager.m in Sources */,
 				1E13CA901E90CC8B000DBF74 /* UIView+Utils.m in Sources */,
+				1EDAF8821EB5AD6600BC48B3 /* PhotoShowcaseCell.m in Sources */,
 				1ECB6F8B1E86566100BA0D77 /* RestRequest.m in Sources */,
 				1E9E464C1E99D853008613AB /* Photo.m in Sources */,
 				1E0DCE081EB48CBC00C6316E /* PhotoMapRegion+Utils.m in Sources */,
@@ -648,6 +683,7 @@
 				1EBCF1AE1EAC929E00C2FDFA /* PhotoCell.m in Sources */,
 				1E13CA8C1E90C297000DBF74 /* PhotoGridViewController.m in Sources */,
 				1E9E464F1E99D86B008613AB /* PhotoManager.m in Sources */,
+				1EDAF8771EB5891600BC48B3 /* AnnotationCallOutView.m in Sources */,
 				1E9E46491E99CF84008613AB /* UIImageView+WebImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

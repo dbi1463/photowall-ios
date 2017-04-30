@@ -13,6 +13,7 @@
 
 #import "PhotoCell.h"
 #import "PhotoGridSectionHeader.h"
+#import "PhotoShowcaseViewController.h"
 
 #import "NSDate+Utils.h"
 
@@ -106,6 +107,19 @@
 	}
 }
 
+- (void)collectionView:(UICollectionView*)collectionView didSelectItemAtIndexPath:(NSIndexPath*)indexPath {
+	Photo* photo = [[_cache objectAtIndex:indexPath.section] objectAtIndex:indexPath.item];
+	PhotoShowcaseViewController* controller = [[PhotoShowcaseViewController alloc] initWithNibName:@"PhotoShowcaseView" bundle:nil];
+	NSMutableArray* photos = [NSMutableArray new];
+	for (NSArray* section in _cache) {
+		[photos addObjectsFromArray:section];
+	}
+	controller.host = self.rootViewController;
+	controller.photos = photos;
+	controller.currentPhotoIndex = [photos indexOfObject:photo];
+	[self.rootViewController presentViewController:controller animated:YES completion:nil];
+}
+
 #pragma mark - Private Methods
 - (void)addPhotos:(NSArray*)photos {
 	for (Photo* photo in photos) {
@@ -129,12 +143,12 @@
 - (void)makeCache {
 	[_cache removeAllObjects];
 	NSArray* keys = [[_photos allKeys] sortedArrayUsingComparator:^NSComparisonResult(NSString* key1, NSString* key2) {
-		return [key1 compare:key2];
+		return [key2 compare:key1];
 	}];
 	for (NSString* key in keys) {
 		NSMutableDictionary* section = [_photos objectForKey:key];
 		[_cache addObject:[[section allValues] sortedArrayUsingComparator:^NSComparisonResult(Photo* photo1, Photo* photo2) {
-			return [photo1.timestamp compare:photo2.timestamp];
+			return [photo2.timestamp compare:photo1.timestamp];
 		}]];
 	}
 }

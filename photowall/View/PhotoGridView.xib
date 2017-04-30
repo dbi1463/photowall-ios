@@ -33,6 +33,7 @@
                 <constraint firstAttribute="bottom" secondItem="cZq-aQ-Ith" secondAttribute="bottom" id="aLs-wk-KNR"/>
                 <constraint firstAttribute="trailing" secondItem="cZq-aQ-Ith" secondAttribute="trailing" id="ixg-iS-tZh"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>
