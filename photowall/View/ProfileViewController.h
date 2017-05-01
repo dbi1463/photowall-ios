@@ -10,13 +10,14 @@
 
 #import "AccountManager.h"
 
-@interface ProfileViewController : UIViewController<AccountEditDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface ProfileViewController : UIViewController<AccountEditDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView* portrait;
 @property (weak, nonatomic) IBOutlet UITextField* nicknameField;
 
 @property (weak, nonatomic) IBOutlet UIButton* updateButton;
 @property (weak, nonatomic) IBOutlet UIButton* changePortraitButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint* topConstraint;
 
 @property (weak) AccountManager* accountManager;
 @property (weak) UIViewController* rootViewController;

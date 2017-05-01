@@ -12,6 +12,7 @@
 
 #import "User.h"
 
+#import "UIColor+Defaults.h"
 #import "UIImageView+WebImage.h"
 #import "UIViewController+Mask.h"
 
@@ -23,12 +24,20 @@
 	self.accountManager.editDelegate = self;
 	self.portrait.layer.cornerRadius = 10;
 	self.portrait.layer.masksToBounds = YES;
+	self.portrait.layer.borderColor = [UIColor main].CGColor;
+	self.portrait.layer.borderWidth = 1;
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	[self.rootViewController setTitle:@"Profile"];
 	[self updateAllViews];
+}
+
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - IBActons
@@ -81,11 +90,41 @@
 	}];
 }
 
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldReturn:(UITextField*)textField {
+	[textField endEditing:YES];
+	return YES;
+}
+
 #pragma mark - Private Methods
 - (void)updateAllViews {
 	self.nicknameField.text = self.accountManager.me.nickname;
 	NSString* path = self.accountManager.me.portraitPath;
 	[self.portrait setImageWithPath:path andPlaceholder:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+	NSDictionary* info = [notification userInfo];
+	CGSize size = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+	NSTimeInterval duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+	NSInteger options = [[info objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	CGFloat offset = (self.updateButton.frame.origin.y + self.updateButton.frame.size.height) - (self.view.frame.size.height - size.height);
+	if (offset > 0) {
+		[UIView animateKeyframesWithDuration:duration delay:0 options:options animations:^{
+			self.topConstraint.constant = 30 - offset;
+			[self.view setNeedsLayout];
+		} completion:nil];
+	}
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+	NSDictionary* info = [notification userInfo];
+	NSTimeInterval duration = [[info objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+	NSInteger options = [[info objectForKey:UIKeyboardAnimationCurveUserInfoKey] integerValue];
+	[UIView animateWithDuration:duration delay:0 options:options animations:^{
+		self.topConstraint.constant = 30;
+		[self.view setNeedsLayout];
+	} completion:nil];
 }
 
 @end
