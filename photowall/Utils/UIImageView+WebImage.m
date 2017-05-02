@@ -30,7 +30,7 @@
 }
 
 - (void)setImageWithPath:(NSString*)path andPlaceholder:(UIImage*)placeholder {
-	NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DefaultEndPoint, path]];
+	NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [RestClient defaultEndPoint], path]];
 	[self setImageWithURL:url andPlaceholder:placeholder];
 }
 

@@ -10,6 +10,7 @@
 
 #import "RestRequest.h"
 
+NSString* const ServerEndPointKey = @"ServerEndPoint";
 NSString* const DefaultEndPoint = @"http://localhost:4567/ws";
 
 @implementation RestClient {
@@ -18,8 +19,13 @@ NSString* const DefaultEndPoint = @"http://localhost:4567/ws";
 }
 
 #pragma mark - Initializers
-- (instancetype)initWithEndPoint:(NSString*)endPoint {
-	return [self initWithEndPoint:endPoint andAuthenticator:nil];
++ (NSString*)defaultEndPoint {
+	NSString* endPoint = [[[NSBundle mainBundle] infoDictionary] objectForKey:ServerEndPointKey];
+	return endPoint != nil ? endPoint : DefaultEndPoint;
+}
+
+- (instancetype)initWithAuthenticator:(id<RequestAuthenticator>)authenticator {
+	return [self initWithEndPoint:[RestClient defaultEndPoint] andAuthenticator:nil];
 }
 
 - (instancetype)initWithEndPoint:(NSString*)endPoint andAuthenticator:(id<RequestAuthenticator>)authenticator {

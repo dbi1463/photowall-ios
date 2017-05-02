@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 
 #import "NSString+Utils.h"
+#import "UIViewController+Mask.h"
 
 @implementation LoginViewController
 
@@ -19,12 +20,14 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
+	[self showMask];
 	NSString* email = self.emailField.text;
 	NSString* password = self.passwordField.text;
 	[self.accountManager loginWithEmail:email andPassword:password];
 }
 
 - (IBAction)registerButtonPressed:(id)sender {
+	[self showMask];
 	NSString* email = self.emailField.text;
 	NSString* password = self.passwordField.text;
 	NSString* nickname = self.nicknameField.text;

@@ -11,8 +11,6 @@
 #import "RestRequest.h"
 #import "RestResponse.h"
 
-FOUNDATION_EXPORT NSString* const DefaultEndPoint;
-
 @protocol RequestAuthenticator <NSObject>
 
 - (void)authenticate:(RestRequest*)request;
@@ -21,7 +19,9 @@ FOUNDATION_EXPORT NSString* const DefaultEndPoint;
 
 @interface RestClient : NSObject
 
-- (instancetype)initWithEndPoint:(NSString*)endPoint;
++ (NSString*)defaultEndPoint;
+
+- (instancetype)initWithAuthenticator:(id<RequestAuthenticator>)authenticator;
 
 - (instancetype)initWithEndPoint:(NSString*)endPoint andAuthenticator:(id<RequestAuthenticator>)authenticator;
 

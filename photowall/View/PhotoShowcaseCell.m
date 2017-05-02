@@ -38,7 +38,7 @@ NSString* const PhotoShowcaseCellIdentifier = @"PhotoShowcaseCell";
 	[self.loadingIndicator startAnimating];
 	[self.preivew setHidden:NO];
 	[self.preivew setImageWithPath:photo.thumbnailPath andPlaceholder:nil];
-	NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", DefaultEndPoint, photo.fullSizeImagePath]];
+	NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [RestClient defaultEndPoint], photo.fullSizeImagePath]];
 
 	_fullSizeImageView = [UIImageView new];
 	_fullSizeImageView.tag = [url.absoluteString hash];
