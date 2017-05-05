@@ -25,7 +25,7 @@ NSString* const DefaultEndPoint = @"http://localhost:4567/ws";
 }
 
 - (instancetype)initWithAuthenticator:(id<RequestAuthenticator>)authenticator {
-	return [self initWithEndPoint:[RestClient defaultEndPoint] andAuthenticator:nil];
+	return [self initWithEndPoint:[RestClient defaultEndPoint] andAuthenticator:authenticator];
 }
 
 - (instancetype)initWithEndPoint:(NSString*)endPoint andAuthenticator:(id<RequestAuthenticator>)authenticator {
